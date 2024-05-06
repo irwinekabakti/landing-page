@@ -18,15 +18,15 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <div className="fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#08111e] text-gray-300">
+    <nav className="sticky w-full h-[80px] flex justify-between items-center px-4 bg-[#08111e] text-gray-300">
       <div>{/* <img src={Logo} alt="" style={{ width: "50px" }} /> */}</div>
 
       {/* Menus */}
       <ul className="md:flex hidden">
         <li>Home</li>
         <li>About</li>
-        <li>Skills</li>
         <li>Project</li>
+        <li>Our Team</li>
         <li>Contact</li>
       </ul>
 
@@ -44,8 +44,8 @@ const Navbar: React.FC = () => {
         }>
         <li className="py-6 text-1xl uppercase font-semibold">Home</li>
         <li className="py-6 text-1xl uppercase font-semibold">About</li>
-        <li className="py-6 text-1xl uppercase font-semibold">Skills</li>
         <li className="py-6 text-1xl uppercase font-semibold">Project</li>
+        <li className="py-6 text-1xl uppercase font-semibold">Our Team</li>
         <li className="py-6 text-1xl uppercase font-semibold">Contact</li>
       </ul>
 
@@ -82,7 +82,7 @@ const Navbar: React.FC = () => {
           </li>
         </ul>
       </div>
-    </div>
+    </nav>
   );
 };
 
