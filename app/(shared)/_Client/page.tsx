@@ -8,13 +8,13 @@ import "slick-carousel/slick/slick-theme.css";
 import clients from "@/assets/client";
 
 interface ClientProps {
-  infinite?: boolean;
-  speed?: number;
-  slidesToShow?: number;
-  slidesToScroll?: number;
-  autoplay?: boolean;
-  autoplaySpeed?: number;
-  cssEase?: string;
+  infinite: boolean;
+  speed: number;
+  slidesToShow: number;
+  slidesToScroll: number;
+  autoplay: boolean;
+  autoplaySpeed: number;
+  cssEase: string;
 }
 
 const Client: React.FC<ClientProps> = ({

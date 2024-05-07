@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Hero from "./(shared)/_Hero/page";
 import About from "./(shared)/_About/page";
 import Services from "./(shared)/_Services/page";
