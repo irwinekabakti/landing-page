@@ -36,7 +36,3 @@ const About = () => {
 };
 
 export default About;
-
-{
-  /* <div className="aboutImage hidden sm:block md:block mx-8 my-auto lg:mx-16"> */
-}
