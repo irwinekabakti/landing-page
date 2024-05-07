@@ -11,8 +11,8 @@ export default function Home() {
     <main>
       <Hero />
       <About />
-      <Services />
       <Client />
+      <Services />
       <Achievement />
       <FAQ />
       {/* <div className="mt-8">
