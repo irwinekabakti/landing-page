@@ -7,7 +7,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import clients from "@/assets/client";
 
-interface SliderProps {
+interface ClientProps {
   infinite?: boolean;
   speed?: number;
   slidesToShow?: number;
@@ -17,15 +17,23 @@ interface SliderProps {
   cssEase?: string;
 }
 
-const Client: React.FC<SliderProps> = () => {
+const Client: React.FC<ClientProps> = ({
+  infinite = true,
+  speed = 5000,
+  slidesToShow = 6,
+  slidesToScroll = 1,
+  autoplay = true,
+  autoplaySpeed = 5000,
+  cssEase = "linear",
+}) => {
   const settings = {
-    infinite: true,
-    slidesToShow: 6,
-    slidesToScroll: 1,
-    autoplay: true,
-    speed: 5000,
-    autoplaySpeed: 5000,
-    cssEase: "linear",
+    infinite,
+    slidesToShow,
+    slidesToScroll,
+    autoplay,
+    speed,
+    autoplaySpeed,
+    cssEase,
   };
 
   return (
