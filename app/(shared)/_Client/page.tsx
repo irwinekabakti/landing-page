@@ -18,7 +18,7 @@ interface SliderProps {
 }
 
 const Client: React.FC<SliderProps> = () => {
-  const settings: SliderProps = {
+  const settings = {
     infinite: true,
     slidesToShow: 6,
     slidesToScroll: 1,
