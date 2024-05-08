@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import GridComponent from "../_Grid/page";
+import GridComponent from "../_Grid/GridComponent";
 import AboutImg from "../../../assets/about.png";
 import classes from "./style.module.css";
 

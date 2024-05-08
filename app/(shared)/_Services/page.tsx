@@ -8,7 +8,7 @@ import Link from "next/link";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import service from "@/assets/_services/index";
-import GridComponent from "../_Grid/page";
+import GridComponent from "../_Grid/GridComponent";
 import classes from "./style.module.css";
 
 const Services = () => {
