@@ -1,41 +1,39 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import clients from "@/assets/client";
+import SliderComponent from "./SliderComponent";
+import clients from "@/assets/_client/index";
 
 const Client: React.FC = () => {
-  const settings = {
+  const commonSettings = {
     infinite: true,
     speed: 5000,
     slidesToShow: 6,
-    slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 5000,
     cssEase: "linear",
   };
 
+  const settings = { ...commonSettings, rtl: false };
+  const settings2 = { ...commonSettings, rtl: true };
+
   return (
-    <div className="client pt-8 mx-8 my-auto lg:mx-16" id="#client">
+    <div className="client py-8 mx-8 my-auto lg:mx-16" id="client">
       <h1 className="text-center text-3xl font-bold py-8 text-[#144b51]">
         Our Client
       </h1>
-      <Slider {...settings}>
-        {clients.map((data) => (
-          <div key={data.id}>
-            <Image
-              src={data.img}
-              alt={data.name}
-              style={{
-                marginTop: data.id === 12 || data.id === 18 ? "20px" : "0",
-              }}
-            />
-          </div>
-        ))}
-      </Slider>
+
+      <SliderComponent
+        settings={settings}
+        clients={clients}
+        className="sm:mb-8 lg:mb-16"
+      />
+
+      <SliderComponent
+        settings={settings2}
+        clients={clients}
+        className="mt-4"
+      />
     </div>
   );
 };

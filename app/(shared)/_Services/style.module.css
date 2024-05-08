@@ -1,0 +1,14 @@
+.btnServices {
+  background-image: linear-gradient(to right, #000 50%, transparent 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: background-position 0.5s ease-in-out;
+  color: #000;
+  border: 1px solid #144b51;
+  outline: none;
+}
+
+.btnServices:hover {
+  background-position: left bottom;
+  color: #fff;
+}

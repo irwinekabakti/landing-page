@@ -1,38 +1,91 @@
 "use client";
 
 import React, { useState } from "react";
-// import Logo from "../assets/css.svg";
-import {
-  FaBars,
-  FaTimes,
-  FaFacebook,
-  FaInstagram,
-  FaGithub,
-} from "react-icons/fa";
-import { HiOutlineMail } from "react-icons/hi";
+import { useEffect } from "react";
+import LogoNavbar from "@/assets/hilink-logo.svg";
+import { FaBars, FaTimes } from "react-icons/fa";
+import Link from "next/link";
+import Image from "next/image";
 
 const Navbar: React.FC = () => {
   const [nav, setNav] = useState(false);
+  const [isScroll, setIsScroll] = useState(false);
+
   const handleNavbar = () => {
     setNav(!nav);
   };
 
+  const handleScroll = () => {
+    if (window.scrollY > 0) {
+      setIsScroll(true);
+    } else {
+      setIsScroll(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <nav className="sticky w-full h-[80px] flex justify-between items-center px-4 bg-[#08111e] text-gray-300">
-      <div>{/* <img src={Logo} alt="" style={{ width: "50px" }} /> */}</div>
+    <nav
+      className={`fixed w-full h-[80px] z-50 flex justify-between  items-center px-4 ${
+        isScroll ? "bg-[#fff] shadow-lg" : "bg-transparent "
+      }`}>
+      <div className="lg:mx-16 sm:mx-12">
+        <Image
+          src={LogoNavbar}
+          alt="logoNavbar"
+          className="cursor-pointer w-[50px] "
+        />
+      </div>
 
       {/* Menus */}
-      <ul className="md:flex hidden">
-        <li>Home</li>
-        <li>About</li>
-        <li>Project</li>
-        <li>Our Team</li>
-        <li>Contact</li>
+      <ul className="md:flex hidden lg:mx-16 sm:mx-12">
+        <li
+          className={`${
+            isScroll ? "text-[#000]" : "text-[#fff]"
+          } hover:text-[#144b51]`}>
+          <Link href="/">Home</Link>
+        </li>
+        <li
+          className={`${
+            isScroll ? "text-[#000]" : "text-[#fff]"
+          } hover:text-[#144b51]`}>
+          <Link href="/about">About</Link>
+        </li>
+        <li
+          className={`${
+            isScroll ? "text-[#000]" : "text-[#fff]"
+          } hover:text-[#144b51]`}>
+          <Link href="/project">Project</Link>
+        </li>
+        <li
+          className={`${
+            isScroll ? "text-[#000]" : "text-[#fff]"
+          } hover:text-[#144b51]`}>
+          <Link href="/OurTeam">Our Team</Link>
+        </li>
+        <li
+          className={`${
+            isScroll ? "text-[#000]" : "text-[#fff]"
+          } hover:text-[#144b51]`}>
+          <Link href="/contact">Contact</Link>
+        </li>
       </ul>
 
       {/* Hamburger */}
       <div onClick={handleNavbar} className="md:hidden z-10">
-        {!nav ? <FaBars /> : <FaTimes />}
+        {!nav ? (
+          <FaBars
+            className={`${isScroll ? "text-[#144b51]" : "text-[#fff]"} `}
+          />
+        ) : (
+          <FaTimes className="text-[#fff]" />
+        )}
       </div>
 
       {/* Mobile Menus */}
@@ -42,11 +95,21 @@ const Navbar: React.FC = () => {
             ? "hidden"
             : "absolute top-0 left-0 w-full h-screen bg-[#08111e] flex flex-col justify-center items-center"
         }>
-        <li className="py-6 text-1xl uppercase font-semibold">Home</li>
-        <li className="py-6 text-1xl uppercase font-semibold">About</li>
-        <li className="py-6 text-1xl uppercase font-semibold">Project</li>
-        <li className="py-6 text-1xl uppercase font-semibold">Our Team</li>
-        <li className="py-6 text-1xl uppercase font-semibold">Contact</li>
+        <li className="py-3 text-1xl uppercase font-semibold text-[#fff]">
+          <Link href="/">Home</Link>
+        </li>
+        <li className="py-3 text-1xl uppercase font-semibold text-[#fff]">
+          <Link href="/about">About</Link>
+        </li>
+        <li className="py-3 text-1xl uppercase font-semibold text-[#fff]">
+          <Link href="/project">Project</Link>
+        </li>
+        <li className="py-3 text-1xl uppercase font-semibold text-[#fff]">
+          <Link href="/OurTeam">Our Team</Link>
+        </li>
+        <li className="py-3 text-1xl uppercase font-semibold text-[#fff]">
+          <Link href="/contact">Contact</Link>
+        </li>
       </ul>
 
       {/* Social Icons */}

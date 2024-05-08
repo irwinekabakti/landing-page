@@ -27,18 +27,18 @@ export default function RootLayout({
   );
 }
 
-// export default const = RootLayout({
+// const RootLayout = ({
 //   children,
 // }: Readonly<{
 //   children: React.ReactNode;
-// }>) => {
-//   return (
-//     <html lang="en">
-//       <body className={inter.className}>
-//         <Navbar />
-//         {children}
-//         <Footer />
-//       </body>
-//     </html>
-//   );
-// }
+// }>) => (
+//   <html lang="en">
+//     <body className={inter.className}>
+//       <Navbar />
+//       {children}
+//       <Footer />
+//     </body>
+//   </html>
+// );
+
+// export default RootLayout;

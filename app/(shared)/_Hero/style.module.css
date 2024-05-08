@@ -1,16 +1,15 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+.heroDetail {
+  position: relative;
+}
 
-@layer base {
-  body {
-    @apply font-[Raleway];
-  }
+.titleDetail {
+  margin-left: 80px;
+  font-weight: 700;
+}
 
-  li {
-    @apply px-4;
-    @apply cursor-pointer;
-  }
+.btnHero {
+  margin-left: 80px;
+  border: 1px solid #fff;
 }
 
 @media (min-width: 276px) and (max-width: 411px) {
