@@ -1,12 +1,16 @@
 import React, { ReactNode } from "react";
 
-interface GridProps {
+interface GridComponentProps {
   children: ReactNode;
   id?: string;
   className?: string;
 }
 
-const GridComponent: React.FC<GridProps> = ({ children, id, className }) => {
+const GridComponent: React.FC<GridComponentProps> = ({
+  children,
+  id,
+  className,
+}) => {
   return (
     <div
       id={id}
