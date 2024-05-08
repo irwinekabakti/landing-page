@@ -1,14 +1,13 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import GridComponent from "../_Grid/page";
 import AboutImg from "../../../assets/about.png";
 import classes from "./style.module.css";
 
 const About = () => {
   return (
-    <div
-      className="about grid sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-8"
-      id="#about">
+    <GridComponent id="about">
       <div className="aboutDescription mx-8 my-auto lg:mx-16">
         <h2 className="titleAboutUs text-2xl my-4 text-[#144b51]">
           Precise, Personalized Legal Guidance with a Regional Network Of Strong
@@ -34,7 +33,7 @@ const About = () => {
       <div className="aboutImage hidden lg:block mx-8 my-auto lg:mx-16">
         <Image src={AboutImg} alt="about-image" />
       </div>
-    </div>
+    </GridComponent>
   );
 };
 

@@ -8,6 +8,7 @@ import Link from "next/link";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import service from "@/assets/_services/index";
+import GridComponent from "../_Grid/page";
 import classes from "./style.module.css";
 
 const Services = () => {
@@ -52,16 +53,14 @@ const Services = () => {
 
   return (
     <>
-      <div
-        className="about grid sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-8 pt-16"
-        id="#about">
-        <div className="aboutDescription mx-8 mt-0 lg:mx-16">
-          <h2 className="titleAboutUs text-2xl my-4 text-[#144b51]">
+      <GridComponent id="services" className="my-8 lg:my-20">
+        <div className="servicesDescription mx-8 mt-0 lg:mx-16">
+          <h2 className="titleServicesUs text-2xl my-4 text-[#144b51]">
             SERVICES
           </h2>
         </div>
 
-        <div className="aboutImage mx-8 mt-0 lg:mx-16">
+        <div className="servicesImage mx-8 mt-0 lg:mx-16">
           <p className="descriptionAboutUs text-[#555555]">
             GHP Law Firm is equipped to handle your legal needs in the rapidly
             developing Southeast Asian market. Our team of seasoned attorneys
@@ -71,7 +70,7 @@ const Services = () => {
             Southeast Asian law and achieve your business goals.
           </p>
         </div>
-      </div>
+      </GridComponent>
 
       <div className="sliderContainer mx-8 mt-0 lg:mx-16 py-6">
         <Slider {...settings}>

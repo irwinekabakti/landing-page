@@ -1,15 +1,13 @@
-"use client";
-
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import FooterColumn from "./FooterColumn";
 import LogoFooter from "@/assets/hilink-logo.svg";
 import {
   FOOTER_CONTACT_INFO,
   FOOTER_LINKS,
   SOCIALS,
 } from "../../../constant/index";
-import { FaFacebook, FaInstagram, FaTwitter, FaThreads } from "react-icons/fa6";
 
 const Footer: React.FC = () => {
   const date = new Date();
@@ -30,12 +28,15 @@ const Footer: React.FC = () => {
           </Link>
 
           <div className="flex flex-wrap gap-10 sm:justify-between md:flex-1 ms-4 lg:me-20 md:me-8">
-            {FOOTER_LINKS.map((columns, index) => (
-              <FooterColumn title={columns.title} key={index}>
+            {FOOTER_LINKS.map((columns) => (
+              <FooterColumn title={columns.title} key={columns.id}>
                 <ul className="regular-14 flex flex-col gap-4 text-[#7B7B7B]">
                   {columns.links.map((link) => (
-                    <Link href="/" key={link} className="hover:text-[#144b51]">
-                      {link}
+                    <Link
+                      href={link.url}
+                      key={link.id}
+                      className="hover:text-[#144b51]">
+                      {link.name}
                     </Link>
                   ))}
                 </ul>
@@ -45,24 +46,24 @@ const Footer: React.FC = () => {
             <div className="flex flex-col gap-5">
               <FooterColumn title={FOOTER_CONTACT_INFO.title}>
                 {FOOTER_CONTACT_INFO.links.map((link) => (
-                  <Link
-                    href="/"
-                    key={link.label}
+                  <div
+                    key={link.id}
                     className="flex gap-4 md:flex-col lg:flex-row">
                     <p className="whitespace-nowrap">{link.label}:</p>
-                    {/* <Link href={`mailto: ${link.value}`}>{link.value}</Link> */}
-                    {/* {link.value.includes("@") ? (
-                      <Link href={`mLinkailto:${link.value}`}>
+                    {link.type === "mail" ? (
+                      <Link
+                        href={`mailto:${link.value}`}
+                        className="hover:text-[#144b51]">
                         {link.value}
                       </Link>
                     ) : (
-                      <Link href={`tel:${link.value}`}>{link.value}</Link>
-                    )} */}
-
-                    <p className="medium-14 whitespace-nowrap text-[#021639]">
-                      {link.value}
-                    </p>
-                  </Link>
+                      <Link
+                        href={`tel:${link.value}`}
+                        className="hover:text-[#144b51]">
+                        {link.value}
+                      </Link>
+                    )}
+                  </div>
                 ))}
               </FooterColumn>
             </div>
@@ -70,26 +71,34 @@ const Footer: React.FC = () => {
             <div className="flex flex-col gap-5">
               <FooterColumn title={SOCIALS.title}>
                 <ul className="regular-14 flex gap-4 text-[#7B7B7B]">
-                  <Link
-                    href="https://www.facebook.com/"
-                    className="text-blue-600 hover:text-[#144b51]">
-                    <FaFacebook size={26} />
-                  </Link>
-                  <Link
-                    href="https://www.instagram.com/"
-                    className="text-pink-600 hover:text-[#144b51]">
-                    <FaInstagram size={26} />
-                  </Link>
-                  <Link
-                    href="https://twitter.com/"
-                    className="text-gray-900 hover:text-[#144b51]">
-                    <FaTwitter size={26} />
-                  </Link>
-                  <Link
-                    href="https://www.threads.net/"
-                    className="text-[#333] hover:text-[#144b51]">
-                    <FaThreads size={26} />
-                  </Link>
+                  {SOCIALS.social.map((data) => (
+                    <Link href={data.url} key={data.id}>
+                      {data.name === "Facebook" && (
+                        <data.icon
+                          size={26}
+                          className={`hover:text-blue-600 text-[#144b51]`}
+                        />
+                      )}
+                      {data.name === "Instagram" && (
+                        <data.icon
+                          size={26}
+                          className={`hover:text-pink-600 text-[#144b51]`}
+                        />
+                      )}
+                      {data.name === "Twitter" && (
+                        <data.icon
+                          size={26}
+                          className={`hover:text-gray-900 text-[#144b51]`}
+                        />
+                      )}
+                      {data.name === "Threads" && (
+                        <data.icon
+                          size={26}
+                          className={`hover:text-[#333] text-[#144b51] `}
+                        />
+                      )}
+                    </Link>
+                  ))}
                 </ul>
               </FooterColumn>
             </div>
@@ -103,20 +112,6 @@ const Footer: React.FC = () => {
         </p>
       </div>
     </footer>
-  );
-};
-
-type FooterColumnProps = {
-  title: string;
-  children: React.ReactNode;
-};
-
-const FooterColumn = ({ title, children }: FooterColumnProps) => {
-  return (
-    <div className="flex flex-col gap-5">
-      <h4 className="font-bold text-lg whitespace-nowrap">{title}</h4>
-      {children}
-    </div>
   );
 };
 
