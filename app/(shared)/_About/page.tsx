@@ -7,7 +7,7 @@ import classes from "./style.module.css";
 
 const About = () => {
   return (
-    <GridComponent id="about">
+    <GridComponent className="mb-4 lg:mb-12" id="about">
       <div className="aboutDescription mx-8 my-auto lg:mx-16">
         <h2 className="titleAboutUs text-2xl my-4 text-[#144b51]">
           Precise, Personalized Legal Guidance with a Regional Network Of Strong

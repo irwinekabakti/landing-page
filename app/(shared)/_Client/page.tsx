@@ -23,9 +23,17 @@ const Client: React.FC = () => {
         Our Client
       </h1>
 
-      <SliderComponent settings={settings} clients={clients} />
+      <SliderComponent
+        settings={settings}
+        clients={clients}
+        className="sm:mb-8 lg:mb-16"
+      />
 
-      <SliderComponent settings={settings2} clients={clients} />
+      <SliderComponent
+        settings={settings2}
+        clients={clients}
+        className="mt-4"
+      />
     </div>
   );
 };
