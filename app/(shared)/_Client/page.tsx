@@ -63,7 +63,7 @@ const Client: React.FC = () => {
               //     isSmallScreen &&
               //     (data.name === "Jago" || data.name === "Taco")
               //       ? "20px"
-              //       : "0",
+              //       : "-20px",
               // }}
             />
           </div>
@@ -80,6 +80,13 @@ const Client: React.FC = () => {
                 marginTop:
                   data.name === "Jago" || data.name === "Taco" ? "20px" : "0",
               }}
+              // style={{
+              //   marginTop:
+              //     isSmallScreen &&
+              //     (data.name === "Jago" || data.name === "Taco")
+              //       ? "20px"
+              //       : "-20px",
+              // }}
             />
           </div>
         ))}

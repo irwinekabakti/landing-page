@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import AboutImg from "../../../assets/about.png";
+import classes from "./style.module.css";
 
 const About = () => {
   return (
@@ -22,7 +23,9 @@ const About = () => {
           clients.
         </p>
         <div className="my-4">
-          <Link href="about" className="btnAbout px-12 py-3">
+          <Link
+            href="about"
+            className={`${classes.btnAbout} btnAbout px-12 py-3`}>
             Learn more
           </Link>
         </div>

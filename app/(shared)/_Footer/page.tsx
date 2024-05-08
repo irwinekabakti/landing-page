@@ -3,6 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import LogoFooter from "@/assets/hilink-logo.svg";
 import {
   FOOTER_CONTACT_INFO,
   FOOTER_LINKS,
@@ -15,11 +16,17 @@ const Footer: React.FC = () => {
   const getYear = date.getFullYear();
 
   return (
-    <footer className="flexCenter mb-24">
+    <footer className="flexCenter mb-16">
       <div className="padding-container max-container flex w-full flex-col gap-14">
         <div className="flex flex-col items-start justify-center gap-[10%] md:flex-row">
           <Link href="/" className="mb-10">
-            <Image src="hilink-logo.svg" alt="logo" width={74} height={29} />
+            <Image
+              src={LogoFooter}
+              alt="logo"
+              width={74}
+              height={29}
+              className="ms-4 lg:ms-12"
+            />
           </Link>
 
           <div className="flex flex-wrap gap-10 sm:justify-between md:flex-1 ms-4 lg:me-20 md:me-8">
@@ -27,7 +34,7 @@ const Footer: React.FC = () => {
               <FooterColumn title={columns.title} key={index}>
                 <ul className="regular-14 flex flex-col gap-4 text-[#7B7B7B]">
                   {columns.links.map((link) => (
-                    <Link href="/" key={link}>
+                    <Link href="/" key={link} className="hover:text-[#144b51]">
                       {link}
                     </Link>
                   ))}
@@ -43,6 +50,15 @@ const Footer: React.FC = () => {
                     key={link.label}
                     className="flex gap-4 md:flex-col lg:flex-row">
                     <p className="whitespace-nowrap">{link.label}:</p>
+                    {/* <Link href={`mailto: ${link.value}`}>{link.value}</Link> */}
+                    {/* {link.value.includes("@") ? (
+                      <Link href={`mLinkailto:${link.value}`}>
+                        {link.value}
+                      </Link>
+                    ) : (
+                      <Link href={`tel:${link.value}`}>{link.value}</Link>
+                    )} */}
+
                     <p className="medium-14 whitespace-nowrap text-[#021639]">
                       {link.value}
                     </p>
@@ -54,27 +70,24 @@ const Footer: React.FC = () => {
             <div className="flex flex-col gap-5">
               <FooterColumn title={SOCIALS.title}>
                 <ul className="regular-14 flex gap-4 text-[#7B7B7B]">
-                  {/* {SOCIALS.links.map((link) => (
-                    <Link href="/" key={link}>
-                      <Image src={link} alt="logo" width={24} height={24} />
-                      <FaFacebook width={30} />
-                    </Link>
-                  ))} */}
-
                   <Link
                     href="https://www.facebook.com/"
-                    className="text-blue-600">
+                    className="text-blue-600 hover:text-[#144b51]">
                     <FaFacebook size={26} />
                   </Link>
                   <Link
                     href="https://www.instagram.com/"
-                    className="text-pink-600">
+                    className="text-pink-600 hover:text-[#144b51]">
                     <FaInstagram size={26} />
                   </Link>
-                  <Link href="https://twitter.com/" className="text-gray-900">
+                  <Link
+                    href="https://twitter.com/"
+                    className="text-gray-900 hover:text-[#144b51]">
                     <FaTwitter size={26} />
                   </Link>
-                  <Link href="https://www.threads.net/" className="text-[#333]">
+                  <Link
+                    href="https://www.threads.net/"
+                    className="text-[#333] hover:text-[#144b51]">
                     <FaThreads size={26} />
                   </Link>
                 </ul>
@@ -83,8 +96,9 @@ const Footer: React.FC = () => {
           </div>
         </div>
 
-        <div className="border bg-gray-20" />
-        <p className="regular-14 w-full text-center text-gray-30">
+        <div className="border text-[#fff] mx-8" />
+        {/* <hr className="border bg-[#fff] mx-8" /> */}
+        <p className="text-base w-full text-center cursor-pointer">
           {getYear} Hilink | All rights reserved
         </p>
       </div>
@@ -107,30 +121,3 @@ const FooterColumn = ({ title, children }: FooterColumnProps) => {
 };
 
 export default Footer;
-
-// <footer className="bg-wh-900 text-wh-50 py-10 px-10">
-//   <div className="justify-between mx-auto gap-16 sm:flex">
-//     {/* COLOMN 1 */}
-//     <div className="mt-16 basis-1/2 sm:mt-0">
-//       <h4 className="font-bold">BLOG OF THE FUTURE</h4>
-//       <p className="my-5">
-//         Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores,
-//         pariatur?
-//       </p>
-//       <p>c Blog of the Future All Right Reserved</p>
-//     </div>
-//     {/* COLOMN 2 */}
-//     <div className="mt-16 basis-1/4 sm:mt-0">
-//       <h4 className="font-bold">Links</h4>
-//       <p className="my-5">Massa orci senectur</p>
-//       <p className="my-5">some random link</p>
-//       <p>Ullamor vivamus</p>
-//     </div>
-//     {/* COLOMN 3 */}
-//     <div className="mt-16 basis-1/4 sm:mt-0">
-//       <h4 className="font-bold">Contact Us</h4>
-//       <p className="my-5">Tempus metus mattis risus volutpat egestas</p>
-//       <p>+1(646)-8328219</p>
-//     </div>
-//   </div>
-// </footer>

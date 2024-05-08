@@ -8,6 +8,7 @@ import Link from "next/link";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import service from "@/assets/_services/index";
+import classes from "./style.module.css";
 
 const Services = () => {
   // const [isHovered, setIsHovered] = useState(false);
@@ -103,7 +104,9 @@ const Services = () => {
         </Slider>
 
         <div className="detailServices mt-4 flex justify-center sm:justify-start">
-          <Link href="/services" className="btnServices px-6 py-2 text-sm">
+          <Link
+            href="/services"
+            className={`${classes.btnServices} btnServices px-6 py-2 text-sm`}>
             See Our Practices Area
           </Link>
         </div>
