@@ -1,7 +1,7 @@
 "use client";
 
-import React, { useState } from "react";
-import { useEffect } from "react";
+import React, { useState, useEffect } from "react";
+import { useRouter } from "next/router";
 import LogoNavbar from "@/assets/hilink-logo.svg";
 import { FaBars, FaTimes } from "react-icons/fa";
 import Link from "next/link";
@@ -14,6 +14,12 @@ const Navbar: React.FC = () => {
   const handleNavbar = () => {
     setNav(!nav);
   };
+
+  // const router = useRouter();
+
+  // const backHome = () => {
+  //   router.push("services");
+  // };
 
   const handleScroll = () => {
     if (window.scrollY > 0) {
@@ -39,7 +45,8 @@ const Navbar: React.FC = () => {
         <Image
           src={LogoNavbar}
           alt="logoNavbar"
-          className="cursor-pointer w-[50px] "
+          className="cursor-pointer w-[50px]"
+          // onClick={backHome}
         />
       </div>
 

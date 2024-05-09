@@ -1,13 +1,12 @@
 import React from "react";
 import Link from "next/link";
-import Image from "next/image";
-import ImageHero from "../../../assets/Img.jpg";
+import HeroWrapper from "./HeroWrapper";
+import ImageHero from "@/assets/Img.jpg";
 import classes from "./style.module.css";
 
 const Hero = () => {
   return (
-    <div className="hero">
-      <Image src={ImageHero} alt="image-hero" />
+    <HeroWrapper imageSrc={ImageHero}>
       <div className={`heroDetail ${classes.heroDetail}`}>
         <h1
           className={`${classes.titleDetail} titleDetail xl:text-3xl text-[#c9c6c6] mb-6`}>
@@ -19,7 +18,7 @@ const Hero = () => {
           Learn More
         </Link>
       </div>
-    </div>
+    </HeroWrapper>
   );
 };
 
