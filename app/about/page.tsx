@@ -1,14 +1,12 @@
 import React from "react";
-import Hero from "../(shared)/_Hero/page";
 import HeroAbout from "../(shared)/_HeroAbout/page";
-import Achievement from "../(shared)/_Achievement/page";
+// import Achievement from "../(shared)/_Achievement/page";
 
-const About = () => {
+const About: React.FC = () => {
   return (
     <div>
-      <Hero />
       <HeroAbout />
-      <Achievement />
+      {/* <Achievement /> */}
     </div>
   );
 };
