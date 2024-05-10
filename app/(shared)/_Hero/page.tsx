@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import HeroWrapper from "./HeroWrapper";
-import ImageHero from "@/assets/Img.jpg";
+import ImageHero from "@/assets/heroHome.webp";
 import classes from "./style.module.css";
 
 const Hero = () => {
@@ -14,7 +14,7 @@ const Hero = () => {
         </h1>
         <Link
           href="/about"
-          className={`${classes.btnHero} btnHero py-5 px-12 bg-transparent rounded-lg text-[#c9c6c6] text-xl hover:text-[#fff]`}>
+          className={`${classes.btnHero} btnHero px-12 py-4 bg-transparent rounded-lg text-[#c9c6c6] text-xl hover:text-[#fff]`}>
           Learn More
         </Link>
       </div>

@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+/* * {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+} */
+
+.mainHome {
+  overflow-x: hidden;
+}
+
 @layer base {
   body {
     @apply font-[Raleway];
@@ -124,4 +134,8 @@
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
+} */
+
+/* button .slick-arrow {
+
 } */
