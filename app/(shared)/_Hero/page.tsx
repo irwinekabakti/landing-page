@@ -14,7 +14,7 @@ const Hero = () => {
         </h1>
         <Link
           href="/about"
-          className={`${classes.btnHero} btnHero py-5 px-12 bg-transparent rounded-lg text-[#c9c6c6] text-xl hover:text-[#fff]`}>
+          className={`${classes.btnHero} btnHero px-12 py-4 bg-transparent rounded-lg text-[#c9c6c6] text-xl hover:text-[#fff]`}>
           Learn More
         </Link>
       </div>
