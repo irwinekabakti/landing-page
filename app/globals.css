@@ -2,13 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-/* * {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-} */
-
-.mainHome {
+.mainHome,
+.mainAbout,
+.mainServices {
   overflow-x: hidden;
 }
 
@@ -22,120 +18,3 @@
     @apply cursor-pointer;
   }
 }
-
-@media (min-width: 276px) and (max-width: 411px) {
-  .heroDetail {
-    top: -150px;
-  }
-
-  .titleDetail {
-    font-size: 8px;
-    margin-left: 10px;
-    margin-bottom: 4px;
-  }
-
-  .btnHero {
-    padding: 4px 8px;
-    font-size: 8px;
-    margin-left: 10px;
-  }
-}
-
-@media (min-width: 411px) and (max-width: 576px) {
-  .heroDetail {
-    top: -165px;
-  }
-
-  .titleDetail {
-    font-size: 10px;
-    margin-left: 10px;
-    margin-bottom: 4px;
-  }
-
-  .btnHero {
-    padding: 4px 8px;
-    font-size: 8px;
-    margin-left: 10px;
-  }
-}
-
-@media (min-width: 576px) and (max-width: 768px) {
-  .heroDetail {
-    top: -250px;
-  }
-
-  .titleDetail {
-    font-size: 10px;
-    margin-left: 20px;
-    margin-bottom: 4px;
-  }
-
-  .btnHero {
-    padding: 4px 8px;
-    font-size: 8px;
-    margin-left: 20px;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 992px) {
-  .heroDetail {
-    top: -300px;
-  }
-
-  .titleDetail {
-    font-size: 16px;
-    margin-left: 30px;
-    margin-bottom: 4px;
-  }
-
-  .btnHero {
-    padding: 6px 12px;
-    font-size: 10px;
-    margin-left: 30px;
-  }
-}
-
-@media (min-width: 992px) {
-  .heroDetail {
-    top: -400px;
-  }
-
-  .titleDetail {
-    font-size: 24px;
-    margin-left: 70px;
-  }
-
-  .btnHero {
-    font-size: 16px;
-    margin-left: 70px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .heroDetail {
-    top: -500px;
-  }
-}
-
-@media (min-width: 1400px) {
-  .heroDetail {
-    top: -550px;
-  }
-}
-
-/* .inner-banner {
-  background-image: url("../assets/HeroImage.webp");
-  background-size: cover;
-  background-repeat: no-repeat;
-} */
-
-/* .hero {
-  background-image: url("../assets/Img.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 100vh;
-} */
-
-/* button .slick-arrow {
-
-} */
