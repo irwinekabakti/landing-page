@@ -9,6 +9,8 @@ import Dispute from "./dispute.png";
 import Employment from "./employment.png";
 import RealEstate from "./real_estate.png";
 import Technology from "./technology.png";
+import Restructuring from "./restructuring.png";
+import Government from "./goverment-focus.png";
 import { nanoid } from "nanoid";
 
 interface ServiceDataProps {
@@ -32,6 +34,8 @@ const service: ServiceDataProps[] = [
   { id: nanoid(), name: "Employment", img: Employment },
   { id: nanoid(), name: "Intellectual Property", img: RealEstate },
   { id: nanoid(), name: "Technology & Data Protection", img: Technology },
+  { id: nanoid(), name: "Restructuring and Insolvency", img: Restructuring },
+  { id: nanoid(), name: "Government", img: Government },
 ];
 
 export default service;

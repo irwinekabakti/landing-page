@@ -54,13 +54,13 @@ const Services = () => {
   return (
     <>
       <GridComponent id="services" className="my-8 lg:my-20">
-        <div className="servicesDescription mx-8 mt-0 lg:mx-16">
+        <div className="servicesDescription mx-4 mt-0 lg:mx-16">
           <h2 className="titleServicesUs text-2xl my-4 text-[#144b51]">
             SERVICES
           </h2>
         </div>
 
-        <div className="servicesImage mx-8 mt-0 lg:mx-16">
+        <div className="servicesImage mx-4 mt-0 lg:mx-16">
           <p className="descriptionAboutUs text-[#555555]">
             GHP Law Firm is equipped to handle your legal needs in the rapidly
             developing Southeast Asian market. Our team of seasoned attorneys
@@ -72,7 +72,7 @@ const Services = () => {
         </div>
       </GridComponent>
 
-      <div className="sliderContainer mx-8 mt-0 lg:mx-16 py-6">
+      <div className="sliderContainer mx-4 mt-0 lg:mx-16 py-6">
         <Slider {...settings}>
           {service.map((data) => (
             <div className="w-[full] sm:w-1/2 p-4" key={data.id}>
