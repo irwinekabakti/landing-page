@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import HeroWrapper from "./HeroWrapper";
-import ImageHero from "@/assets/Img.jpg";
+import ImageHero from "@/assets/heroHome.webp";
 import classes from "./style.module.css";
 
 const Hero = () => {

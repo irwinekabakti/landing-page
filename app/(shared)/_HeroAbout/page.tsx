@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import ImageHero from "@/assets/henry copy.jpg";
+import ImageHero from "@/assets/heroAbout.webp";
 import HeroWrapper from "../_Hero/HeroWrapper";
 import CardComponent from "./CardComponent";
 import AboutOverview from "./AboutOverview";
@@ -20,13 +20,6 @@ const HeroAbout = () => {
 
   return (
     <HeroWrapper imageSrc={ImageHero} className="opacity-80 mb-16">
-      {/* <div className="AboutUsTitle">
-      <h1
-        className="AboutUsTitle text-2xl"
-        style={{ position: "relative", top: "-300px", marginLeft: "80px" }}>
-        About Hilink Kinthil
-      </h1>
-      </div> */}
       <AboutOverview title="OVERVIEW" content={OverviewContent} />
       <AboutOverview
         title="REGIONAL CAPABILITIES"
@@ -34,50 +27,8 @@ const HeroAbout = () => {
       />
 
       <div className={`${classes.bgAboutService} py-[50px] my-[50px]`}>
-        <div className="mx-8 lg:mx-16">
+        <div className="mx-2 lg:mx-16">
           <div className="flex flex-wrap justify-center">
-            {/* <div className="w-[full] sm:w-1/2 p-4">
-              <div className="bg-white shadow-md p-8 mb-4">
-                <h2 className="text-[#144B51] text-2xl font-bold mb-4">
-                  Full Service Means Full Service
-                </h2>
-                <p className="text-[#555555] mb-4">
-                  Our team has the local know-how and expertise to service our
-                  clients in emerging and established companies in matters
-                  ranging from banking and finance to litigation to
-                  restructuring.
-                </p>
-                <div className="mt-4 md:mt-6 lg:mt-8 ">
-                  <Link
-                    href="/services"
-                    className={`${classes.btnAboutServices} w-full px-4 py-2 my-4`}>
-                    Learn More
-                  </Link>
-                </div>
-              </div>
-            </div>
-            <div className="w-[full] sm:w-1/2 p-4">
-              <div className="bg-white shadow-md p-8 mb-4">
-                <h2 className="text-[#144B51] text-2xl font-bold mb-4">
-                  Local On-the-Ground Teams with International Outlook
-                </h2>
-                <p className="text-[#555555] mb-4">
-                  Indonesia has become not only a hub for fast-growing
-                  industries and sectors but also a center for cross-border and
-                  international deals. Our team’s deep local and cross-border
-                  experience has translated to helping our clients find the best
-                  solutions that make the most practical commercial sense.
-                </p>
-                <div className="mt-4 md:mt-6 lg:mt-8 ">
-                  <Link
-                    href="/project"
-                    className={`${classes.btnAboutServices} w-full text-center px-6 py-2 mt-8`}>
-                    Learn More
-                  </Link>
-                </div>
-              </div>
-            </div> */}
-
             <CardComponent
               title="Full Service Means Full Service"
               description="Our team has the local know-how and expertise to service our clients in emerging and established companies in matters ranging from banking and finance to litigation to restructuring."
