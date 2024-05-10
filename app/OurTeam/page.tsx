@@ -1,7 +1,12 @@
 import React from "react";
+import HeroOurTeam from "../(shared)/_HeroOurTeam/page";
 
 const OurTeam = () => {
-  return <div>OurTeam</div>;
+  return (
+    <main>
+      <HeroOurTeam />
+    </main>
+  );
 };
 
 export default OurTeam;

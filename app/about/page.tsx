@@ -4,10 +4,9 @@ import HeroAbout from "../(shared)/_HeroAbout/page";
 
 const About: React.FC = () => {
   return (
-    <div>
+    <main className="mainAbout">
       <HeroAbout />
-      {/* <Achievement /> */}
-    </div>
+    </main>
   );
 };
 

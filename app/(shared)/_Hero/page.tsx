@@ -1,24 +1,21 @@
 import React from "react";
 import Link from "next/link";
-import HeroWrapper from "./HeroWrapper";
-import ImageHero from "@/assets/heroHome.webp";
 import classes from "./style.module.css";
 
 const Hero = () => {
   return (
-    <HeroWrapper imageSrc={ImageHero}>
-      <div className={`heroDetail ${classes.heroDetail}`}>
-        <h1
-          className={`${classes.titleDetail} titleDetail xl:text-3xl text-[#c9c6c6] mb-6`}>
+    <div className={`${classes.heroHome} heroHome mb-8`}>
+      <div className="heroDetail">
+        <h1 className="titleDetail ml-8 md:ml-12 lg:ml-20 text-xl md:text-3xl text-[#fff] mb-6">
           PRECISE AND PERSONALIZED
         </h1>
         <Link
           href="/about"
-          className={`${classes.btnHero} btnHero px-12 py-4 bg-transparent rounded-lg text-[#c9c6c6] text-xl hover:text-[#fff]`}>
+          className="btnHero border border-white ml-8 md:ml-12 lg:ml-20 px-12 py-4 bg-transparent text-[#fff] text-xl hover:text-[#c9c6c6]">
           Learn More
         </Link>
       </div>
-    </HeroWrapper>
+    </div>
   );
 };
 

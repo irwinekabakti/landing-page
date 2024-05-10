@@ -1,8 +1,17 @@
-.bgAboutService {
-  background-image: url("../../../assets/test-green02.jpg");
+.heroAbout {
+  background-image: url("../../../assets/AboutGHP.png");
   background-size: cover;
   background-repeat: no-repeat;
-  /* opacity: 0.8; */
+  position: relative;
+  z-index: 1;
+  background-position: center center;
+  padding: 200px 0px 120px;
+}
+
+.bgAboutService {
+  background-image: url("../../../assets/aboutContent.png");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .btnAboutServices {
