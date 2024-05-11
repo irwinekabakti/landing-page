@@ -4,8 +4,19 @@ import axios from "axios";
 const BASE_API = `https://randomuser.me/api/`;
 // const BASE_API = 'https://randomuser.me/api/?results=4'
 
-const initialState = {
-  dataUser: [],
+interface dataUserProps {
+  results: any[];
+}
+export interface RootState {
+  dataUser: dataUserProps;
+  status: "idle" | "loading" | "succeeded" | "failed";
+  error: string | null;
+}
+
+const initialState: RootState = {
+  dataUser: {
+    results: [],
+  },
   status: "idle",
   error: null,
 };
@@ -20,7 +31,7 @@ const fetchUserData = createAsyncThunk(
         },
       });
 
-      console.log(data, "check from user-slice");
+      // console.log(data, "check from user-slice");
       return data;
     } catch (error) {
       console.log(error);
@@ -40,7 +51,7 @@ const dataSlice = createSlice({
       })
       .addCase(fetchUserData.fulfilled, (state, action) => {
         state.status = "succeeded";
-        // state.data = action.payload;
+        state.dataUser = action.payload; // Update dataUser with the fetched data
       })
       .addCase(fetchUserData.rejected, (state, action) => {
         state.status = "failed";

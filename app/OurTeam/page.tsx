@@ -1,8 +1,9 @@
 "use client";
 
-import React, { useEffect } from "react";
+import React from "react";
 import HeroOurTeam from "../(shared)/_HeroOurTeam/page";
-import axios from "axios";
+import ReduxProvider from "@/store/redux-provider";
+import CardOurTeam from "../(shared)/_Card_OurTeam/page";
 
 const OurTeam = () => {
   // const getData = async () => {
@@ -23,10 +24,17 @@ const OurTeam = () => {
   //   getData();
   // }, []);
 
+  // const { dataUser } = useSelector((state) => state.dataStore);
+
+  // console.log(dataUser.results);
+
   return (
-    <main>
-      <HeroOurTeam />
-    </main>
+    <ReduxProvider>
+      <main>
+        <HeroOurTeam />
+        <CardOurTeam />
+      </main>
+    </ReduxProvider>
   );
 };
 
