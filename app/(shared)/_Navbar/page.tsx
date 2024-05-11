@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 import LogoNavbar from "@/assets/hilink-logo.svg";
 import { FaBars, FaTimes } from "react-icons/fa";
 import Link from "next/link";
@@ -15,11 +15,11 @@ const Navbar: React.FC = () => {
     setNav(!nav);
   };
 
-  // const router = useRouter();
+  const router = useRouter();
 
-  // const backHome = () => {
-  //   router.push("services");
-  // };
+  const backHome = () => {
+    router.push("/");
+  };
 
   const handleScroll = () => {
     if (window.scrollY > 0) {
@@ -46,7 +46,7 @@ const Navbar: React.FC = () => {
           src={LogoNavbar}
           alt="logoNavbar"
           className="cursor-pointer w-[50px]"
-          // onClick={backHome}
+          onClick={backHome}
         />
       </div>
 
@@ -55,31 +55,31 @@ const Navbar: React.FC = () => {
         <li
           className={`${
             isScroll ? "text-[#000]" : "text-[#fff]"
-          } hover:text-[#144b51]`}>
+          } hover:text-[#DA1D25]`}>
           <Link href="/">Home</Link>
         </li>
         <li
           className={`${
             isScroll ? "text-[#000]" : "text-[#fff]"
-          } hover:text-[#144b51]`}>
+          } hover:text-[#DA1D25]`}>
           <Link href="/about">About</Link>
         </li>
         <li
           className={`${
             isScroll ? "text-[#000]" : "text-[#fff]"
-          } hover:text-[#144b51]`}>
-          <Link href="/project">Project</Link>
+          } hover:text-[#DA1D25]`}>
+          <Link href="/services">Services</Link>
         </li>
         <li
           className={`${
             isScroll ? "text-[#000]" : "text-[#fff]"
-          } hover:text-[#144b51]`}>
+          } hover:text-[#DA1D25]`}>
           <Link href="/OurTeam">Our Team</Link>
         </li>
         <li
           className={`${
             isScroll ? "text-[#000]" : "text-[#fff]"
-          } hover:text-[#144b51]`}>
+          } hover:text-[#DA1D25]`}>
           <Link href="/contact">Contact</Link>
         </li>
       </ul>
@@ -109,7 +109,7 @@ const Navbar: React.FC = () => {
           <Link href="/about">About</Link>
         </li>
         <li className="py-3 text-1xl uppercase font-semibold text-[#fff]">
-          <Link href="/project">Project</Link>
+          <Link href="/services">Services</Link>
         </li>
         <li className="py-3 text-1xl uppercase font-semibold text-[#fff]">
           <Link href="/OurTeam">Our Team</Link>
@@ -118,40 +118,6 @@ const Navbar: React.FC = () => {
           <Link href="/contact">Contact</Link>
         </li>
       </ul>
-
-      {/* Social Icons */}
-      {/* <div className="hidden lg:flex fixed flex-col top-[35%] left-0">
-        <ul>
-          <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-blue-600 rounded-full rounded-l-none">
-            <a
-              href="/"
-              className="flex justify-between items-center w-full text-gray-300">
-              Facebook <FaFacebook size={30} />
-            </a>
-          </li>
-          <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-pink-600 rounded-full rounded-l-none mt-2">
-            <a
-              href="/"
-              className="flex justify-between items-center w-full text-gray-300">
-              Instagram <FaInstagram size={30} />
-            </a>
-          </li>
-          <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#333] rounded-full rounded-l-none mt-2">
-            <a
-              href="/"
-              className="flex justify-between items-center w-full text-gray-300">
-              Github <FaGithub size={30} />
-            </a>
-          </li>
-          <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-gray-900 rounded-full rounded-l-none mt-2">
-            <a
-              href="/"
-              className="flex justify-between items-center w-full text-gray-300">
-              Gmail <HiOutlineMail size={30} />
-            </a>
-          </li>
-        </ul>
-      </div> */}
     </nav>
   );
 };

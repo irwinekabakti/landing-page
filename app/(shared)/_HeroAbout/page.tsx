@@ -56,7 +56,7 @@ const HeroAbout = () => {
             <CardComponent
               title="Local On-the-Ground Teams with International Outlook"
               description="Indonesia has become not only a hub for fast-growing industries and sectors but also a center for cross-border and international deals. Our team’s deep local and cross-border experience has translated to helping our clients find the best solutions that make the most practical commercial sense."
-              linkHref="/project"
+              linkHref="/OurTeam"
               buttonText="Learn More"
               buttonClasses={classes.btnAboutServices}
             />

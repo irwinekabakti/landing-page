@@ -2,14 +2,41 @@
 
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { useAppSelector } from "@/store";
-import { FaStar } from "react-icons/fa6";
+import { FaHome, FaPhoneAlt, FaMobileAlt } from "react-icons/fa";
+import { IoMdMail } from "react-icons/io";
 
 const CardOurTeam = () => {
   const { dataUser } = useAppSelector((state) => state.dataStore);
-  const dataTeam = dataUser.results;
+  let skills: string[] = [
+    "Banking and Finance",
+    "Capital Markets",
+    "Commercial Contracts",
+    "Compliance and Investigations",
+    "Mega Projects and State Owned Enterprises",
+    "Corporate and M&A",
+    "Dispute Resolution and Litigation",
+    "Employment",
+    "Intellectual Property",
+    "Technology & Data Protection",
+    "Restructuring and Insolvency",
+    "Government",
+  ];
 
-  console.log(dataTeam);
+  console.log(dataUser.results);
+
+  let dataTeam = dataUser.results.map((data) => {
+    let shuffledSkills = skills.sort(() => Math.random() - 0.5);
+    const assignedSkills = shuffledSkills.slice(0, 2);
+    return {
+      ...data,
+      skills: assignedSkills,
+    };
+  });
+
+  // console.log(dataTeam);
+
   return (
     <div className="mx-4 mt-0 lg:mx-16 py-6 mb-12">
       <h1 className="text-center text-3xl text-[#144b51] my-4">Our Team</h1>
@@ -28,21 +55,45 @@ const CardOurTeam = () => {
               />
             </div>
 
-            <div className="flex flex-col items-center bg-[#144b51] justify-center rounded-b-xl gap-4 p-4">
+            <div className="flex flex-col items-center bg-[#144b51] rounded-b-xl gap-4 p-4">
               <p className="text-xl font-semibold text-[#fff]">
                 {data.name.title} {data.name.first} {data.name.last}
               </p>
-              <p className="text-sm font-semibold text-[#fff]">
-                {data.location.city}, {data.location.state},{" "}
-                {data.location.country}
-              </p>
-              <p className="text-sm font-semibold text-[#fff]">{data.phone}</p>
-              <p className="text-sm font-semibold text-[#fff]">{data.cell}</p>
-              <p className="text-center text-[#fff]">{data.email}</p>
-              <div className="star my-2 flex gap-2">
-                {Array.from({ length: 5 }, (_, index) => (
-                  <FaStar key={index} className="text-yellow-400" />
-                ))}
+              <div className="flex gap-4 cursor-pointer">
+                <FaHome className="text-[#fff]" />
+                <p className="text-sm font-semibold text-[#fff]">
+                  {data.location.city}, {data.location.country}
+                </p>
+              </div>
+
+              <div className="flex gap-4 cursor-pointer">
+                <FaPhoneAlt className="text-[#fff]" />
+                <Link
+                  href={`tel:${data.phone}`}
+                  className="text-sm font-semibold text-[#fff] hover:text-[#DA1D25]">
+                  {data.phone}
+                </Link>
+              </div>
+              <div className="flex gap-4 cursor-pointer">
+                <FaMobileAlt className="text-[#fff] " />
+                <Link
+                  href={`tel:${data.cell}`}
+                  className="text-sm font-semibold text-[#fff] hover:text-[#DA1D25]">
+                  {data.cell}
+                </Link>
+              </div>
+              <div className="flex gap-4 cursor-pointer">
+                <IoMdMail className="my-auto text-[#fff]" />
+                <Link
+                  href={`mailto:${data.email}`}
+                  className="text-sm font-semibold text-[#fff] hover:text-[#DA1D25]">
+                  {data.email}
+                </Link>
+              </div>
+
+              <div className="skill my-2  text-[#fff]">
+                <p className="mx-auto">{data.skills[0]}</p>
+                <p className="mx-auto">{data.skills[1]}</p>
               </div>
             </div>
           </div>

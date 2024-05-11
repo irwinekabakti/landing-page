@@ -2,7 +2,6 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
 const BASE_API = `https://randomuser.me/api/`;
-// const BASE_API = 'https://randomuser.me/api/?results=4'
 
 interface dataUserProps {
   results: any[];
@@ -12,6 +11,21 @@ export interface RootState {
   status: "idle" | "loading" | "succeeded" | "failed";
   error: string | null;
 }
+
+// let skills:string = [
+//   "Banking and Finance",
+//   "Capital Markets",
+//   "Commercial Contracts",
+//   "Compliance and Investigations",
+//   "Mega Projects and State Owned Enterprises",
+//   "Corporate and M&A",
+//   "Dispute Resolution and Litigation",
+//   "Employment",
+//   "Intellectual Property",
+//   "Technology & Data Protection",
+//   "Restructuring and Insolvency",
+//   "Government",
+// ]
 
 const initialState: RootState = {
   dataUser: {
@@ -31,10 +45,8 @@ const fetchUserData = createAsyncThunk(
         },
       });
 
-      // console.log(data, "check from user-slice");
       return data;
     } catch (error) {
-      console.log(error);
       return thunkAPI.rejectWithValue(error);
     }
   }
@@ -52,6 +64,16 @@ const dataSlice = createSlice({
       .addCase(fetchUserData.fulfilled, (state, action) => {
         state.status = "succeeded";
         state.dataUser = action.payload; // Update dataUser with the fetched data
+        /*
+        state.dataUser.results = action.payload.map((user: User) => {
+          const shuffledSkills = [...skills].sort(() => Math.random() - 0.5);
+          const assignedSkills = shuffledSkills.slice(0, 2);
+          return {
+            ...user,
+            skills: assignedSkills,
+          };
+        });
+        */
       })
       .addCase(fetchUserData.rejected, (state, action) => {
         state.status = "failed";
