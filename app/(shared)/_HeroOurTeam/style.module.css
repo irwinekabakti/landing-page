@@ -1,0 +1,9 @@
+.heroOurTeam {
+  background-image: url("../../../assets/bg-OurTeam.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 1;
+  background-position: center center;
+  padding: 200px 0px 120px;
+}
