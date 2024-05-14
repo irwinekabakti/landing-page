@@ -1,9 +1,9 @@
 "use client";
 
 import React from "react";
-import HeroOurTeam from "../(shared)/_HeroOurTeam/page";
+import HeroOurTeam from "../_components/_HeroOurTeam/page";
 import ReduxProvider from "@/store/redux-provider";
-import CardOurTeam from "../(shared)/_Card_OurTeam/page";
+import CardOurTeam from "../_components/_Card_OurTeam/page";
 
 const OurTeam = () => {
   // const getData = async () => {
@@ -30,7 +30,7 @@ const OurTeam = () => {
 
   return (
     <ReduxProvider>
-      <main>
+      <main className="overflow-x-hidden">
         <HeroOurTeam />
         <CardOurTeam />
       </main>

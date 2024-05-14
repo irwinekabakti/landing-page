@@ -1,12 +1,12 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import HeroServices from "../(shared)/_HeroServices/page";
+import HeroServices from "../_components/_HeroServices/page";
 import service from "@/assets/_services";
 
 const Services: React.FC = () => {
   return (
-    <main className="mainServices">
+    <main className="mainServices overflow-x-hidden">
       <HeroServices />
       <div className="serviceContainer mx-4 mt-0 lg:mx-16 pt-6 pb-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {service.map((data) => (

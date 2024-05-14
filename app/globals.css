@@ -2,11 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-.mainHome,
+/* .mainHome,
 .mainAbout,
 .mainServices {
   overflow-x: hidden;
-}
+} */
 
 @layer base {
   body {
@@ -17,4 +17,20 @@
     @apply px-4;
     @apply cursor-pointer;
   }
+}
+
+.hero {
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 1;
+  background-position: center center;
+}
+
+.btn {
+  background-image: linear-gradient(to right, #000 50%, transparent 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: background-position 0.5s ease-in-out;
+  outline: none;
 }

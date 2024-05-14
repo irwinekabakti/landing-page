@@ -24,7 +24,7 @@ const CardComponent: React.FC<CardAboutProps> = ({
         <div className="mt-4 md:mt-6 lg:mt-8 ">
           <Link
             href={linkHref}
-            className={`${buttonClasses} w-full px-4 py-2 my-4`}>
+            className={`${buttonClasses} btn w-full px-4 py-2 my-4`}>
             {buttonText}
           </Link>
         </div>

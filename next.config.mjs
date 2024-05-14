@@ -1,7 +1,17 @@
+import { hostname } from "os";
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ["randomuser.me"],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "randomuser.me",
+        port: "",
+        // pathname: "/api/portraits/**",
+      },
+    ],
+    // domains: ["randomuser.me"],
   },
 };
 

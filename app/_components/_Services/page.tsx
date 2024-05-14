@@ -8,7 +8,7 @@ import Link from "next/link";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import service from "@/assets/_services/index";
-import GridComponent from "../_Grid/GridComponent";
+import GridComponent from "@/app/(shared)/_Grid/GridComponent";
 import classes from "./style.module.css";
 
 const Services = () => {
@@ -62,10 +62,10 @@ const Services = () => {
 
         <div className="servicesImage mx-4 mt-0 lg:mx-16">
           <p className="descriptionAboutUs text-[#555555]">
-            GHP Law Firm is equipped to handle your legal needs in the rapidly
-            developing Southeast Asian market. Our team of seasoned attorneys
-            and deep understanding of the local legal landscape enable us to
-            provide the support and guidance necessary for success in this
+            Hilink Kinthill Law Firm is equipped to handle your legal needs in
+            the rapidly developing Southeast Asian market. Our team of seasoned
+            attorneys and deep understanding of the local legal landscape enable
+            us to provide the support and guidance necessary for success in this
             dynamic region. Let us help you navigate the complexities of
             Southeast Asian law and achieve your business goals.
           </p>
@@ -105,7 +105,7 @@ const Services = () => {
         <div className="detailServices mt-4 flex justify-center sm:justify-start">
           <Link
             href="/services"
-            className={`${classes.btnServices} btnServices px-6 py-2 text-sm`}>
+            className={`${classes.btnServices} btn px-6 py-2 text-sm`}>
             See Our Practices Area
           </Link>
         </div>

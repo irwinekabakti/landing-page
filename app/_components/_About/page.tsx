@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import GridComponent from "../_Grid/GridComponent";
+import GridComponent from "@/app/(shared)/_Grid/GridComponent";
 import AboutImg from "../../../assets/about.png";
 import classes from "./style.module.css";
 
@@ -14,17 +14,15 @@ const About = () => {
           Local Expertise
         </h2>
         <p className="descriptionAboutUs text-[#555555]">
-          GHP Law Firm is a leading full-service law firm in Indonesia with a
-          team of award-winning attorneys. We handle a range of complex legal
-          matters and have a regional presence. We offer tailored, high-quality
-          legal services at a fair and reasonable cost. Our attorneys are
-          approachable and dedicated to delivering the best results for our
-          clients.
+          Hilink Kinthill Law Firm is a leading full-service law firm in
+          Indonesia with a team of award-winning attorneys. We handle a range of
+          complex legal matters and have a regional presence. We offer tailored,
+          high-quality legal services at a fair and reasonable cost. Our
+          attorneys are approachable and dedicated to delivering the best
+          results for our clients.
         </p>
         <div className="my-4">
-          <Link
-            href="about"
-            className={`${classes.btnAbout} btnAbout px-12 py-3`}>
+          <Link href="about" className={`${classes.btnAbout} btn px-12 py-3`}>
             Learn more
           </Link>
         </div>

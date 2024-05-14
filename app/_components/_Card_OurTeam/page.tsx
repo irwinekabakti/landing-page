@@ -6,6 +6,8 @@ import Link from "next/link";
 import { useAppSelector } from "@/store";
 import { FaHome, FaPhoneAlt, FaMobileAlt } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
+import { MdOutlineWork, MdOutlineWorkspacePremium } from "react-icons/md";
+import { GiAchievement } from "react-icons/gi";
 
 const CardOurTeam = () => {
   const { dataUser } = useAppSelector((state) => state.dataStore);
@@ -91,9 +93,9 @@ const CardOurTeam = () => {
                 </Link>
               </div>
 
-              <div className="skill my-2  text-[#fff]">
-                <p className="mx-auto">{data.skills[0]}</p>
-                <p className="mx-auto">{data.skills[1]}</p>
+              <div className="skill my-2 text-sm font-semibold text-[#fff]">
+                <p className="mx-auto text-center">{data.skills[0]}</p>
+                <p className="mx-auto text-center">{data.skills[1]}</p>
               </div>
             </div>
           </div>
