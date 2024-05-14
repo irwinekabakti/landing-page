@@ -35,7 +35,7 @@ const Footer: React.FC = () => {
                     <Link
                       href={link.url}
                       key={link.id}
-                      className="hover:text-[#144b51]">
+                      className="hover:text-[#DA1D25]">
                       {link.name}
                     </Link>
                   ))}
@@ -53,13 +53,13 @@ const Footer: React.FC = () => {
                     {link.type === "mail" ? (
                       <Link
                         href={`mailto:${link.value}`}
-                        className="hover:text-[#144b51]">
+                        className="hover:text-[#DA1D25]">
                         {link.value}
                       </Link>
                     ) : (
                       <Link
                         href={`tel:${link.value}`}
-                        className="hover:text-[#144b51]">
+                        className="hover:text-[#DA1D25]">
                         {link.value}
                       </Link>
                     )}

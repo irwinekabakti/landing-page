@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 import SliderComponent from "./SliderComponent";
 import clients from "@/assets/_client/index";

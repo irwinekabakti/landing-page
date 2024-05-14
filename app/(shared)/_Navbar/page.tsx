@@ -102,19 +102,19 @@ const Navbar: React.FC = () => {
             ? "hidden"
             : "absolute top-0 left-0 w-full h-screen bg-[#08111e] flex flex-col justify-center items-center"
         }>
-        <li className="py-3 text-1xl uppercase font-semibold text-[#fff]">
+        <li className="py-3 text-1xl uppercase font-semibold text-[#fff] hover:text-[#DA1D25]">
           <Link href="/">Home</Link>
         </li>
-        <li className="py-3 text-1xl uppercase font-semibold text-[#fff]">
+        <li className="py-3 text-1xl uppercase font-semibold text-[#fff] hover:text-[#DA1D25]">
           <Link href="/about">About</Link>
         </li>
-        <li className="py-3 text-1xl uppercase font-semibold text-[#fff]">
+        <li className="py-3 text-1xl uppercase font-semibold text-[#fff] hover:text-[#DA1D25]">
           <Link href="/services">Services</Link>
         </li>
-        <li className="py-3 text-1xl uppercase font-semibold text-[#fff]">
+        <li className="py-3 text-1xl uppercase font-semibold text-[#fff] hover:text-[#DA1D25]">
           <Link href="/OurTeam">Our Team</Link>
         </li>
-        <li className="py-3 text-1xl uppercase font-semibold text-[#fff]">
+        <li className="py-3 text-1xl uppercase font-semibold text-[#fff] hover:text-[#DA1D25]">
           <Link href="/contact">Contact</Link>
         </li>
       </ul>

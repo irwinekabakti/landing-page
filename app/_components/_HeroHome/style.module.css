@@ -1,0 +1,12 @@
+.heroHome {
+  background-image: url("../../../assets/HeroHome.png");
+  padding: 300px 0px 120px;
+}
+
+.btnHero {
+  border: 1px solid #fff;
+}
+
+.btnHero:hover {
+  background-position: left bottom;
+}
