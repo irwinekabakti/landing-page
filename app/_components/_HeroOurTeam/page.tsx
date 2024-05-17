@@ -9,13 +9,24 @@ import OurTeamOverview from "./HeroOverview";
 const HeroOurTeam: React.FC = () => {
   const dispatch = useDispatch();
 
+  // const getData = (dispatch: any) => {
+  //   dispatch(fetchUserData());
+  // };
+
+  // useEffect(() => {
+  //   getData(dispatch);
+  // }, []);
+
   const getData = (dispatch: any) => {
-    dispatch(fetchUserData());
+    const storedData = localStorage.getItem("userData");
+    if (!storedData) {
+      dispatch(fetchUserData());
+    }
   };
 
   useEffect(() => {
     getData(dispatch);
-  }, []);
+  }, [dispatch]);
 
   const contentOverview = [
     "At Hilink Kinthill Law Firm, we are dedicated to attracting and retaining the best legal talent in the industry. Our team is comprised of experienced attorneys who are highly skilled and knowledgeable in their areas of practice.",
