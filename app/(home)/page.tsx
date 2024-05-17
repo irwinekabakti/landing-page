@@ -4,8 +4,9 @@ import Services from "../_components/_Services/page";
 import Client from "../_components/_Client/page";
 import Faq from "../_components/_FAQ/page";
 import Testimonial from "../_components/_Testimonial/page";
+import React from "react";
 
-const Home = () => {
+const Home: React.FC = () => {
   return (
     <main className="mainHome overflow-x-hidden">
       <Hero />

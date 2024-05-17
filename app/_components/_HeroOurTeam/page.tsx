@@ -6,7 +6,7 @@ import { fetchUserData } from "@/store/action/user-slice";
 import classes from "./style.module.css";
 import OurTeamOverview from "./HeroOverview";
 
-const HeroOurTeam = () => {
+const HeroOurTeam: React.FC = () => {
   const dispatch = useDispatch();
 
   const getData = (dispatch: any) => {

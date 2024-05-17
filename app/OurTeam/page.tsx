@@ -5,7 +5,7 @@ import HeroOurTeam from "../_components/_HeroOurTeam/page";
 import ReduxProvider from "@/store/redux-provider";
 import CardOurTeam from "../_components/_Card_OurTeam/page";
 
-const OurTeam = () => {
+const OurTeam: React.FC = () => {
   // const getData = async () => {
   //   try {
   //     const { data } = await axios.get("https://randomuser.me/api/", {

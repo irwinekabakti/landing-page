@@ -2,19 +2,3 @@
   background-image: url("../../../assets/AboutGHP.png");
   padding: 200px 0px 120px;
 }
-
-.bgAboutService {
-  background-image: url("../../../assets/aboutContent.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.btnAboutServices {
-  color: #000;
-  border: 1px solid #144b51;
-}
-
-.btnAboutServices:hover {
-  background-position: left bottom;
-  color: #fff;
-}

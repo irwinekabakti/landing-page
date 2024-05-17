@@ -1,14 +1,15 @@
 import { StaticImageData } from "next/image";
 import { nanoid } from "nanoid";
-import JohnMorgan from "./John_Morgan.jpg";
-import EllieAnderson from "./Ellie_Anderson.jpg";
-import NiaAdebayo from "./Nia_Adebayo.jpg";
-import RigoLouie from "./Rigo_Louie.jpg";
-import MiaWilliams from "./Mia_Williams.jpg";
+import Kai from "./Kai.png";
+import Mudryk from "./Mudryk.png";
+import Nanang from "./Nanang.png";
+import Badminson from "./Son.png";
+import White from "./White.png";
 
 interface TestimonialDataProps {
   id: string;
   name: string;
+  domain: string;
   img: StaticImageData;
   review: string;
 }
@@ -16,33 +17,38 @@ interface TestimonialDataProps {
 const testimonialData: TestimonialDataProps[] = [
   {
     id: nanoid(),
-    name: `John Morgan`,
-    img: JohnMorgan,
-    review: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`,
+    name: `Mas Kai`,
+    domain: `Employment Law`,
+    img: Kai,
+    review: `Hilink Kinthill Law Firm helped me through a stressful workplace dispute with expert legal advice and support, leading to a favorable outcome. Highly recommend!`,
   },
   {
     id: nanoid(),
-    name: `Ellie Anderson`,
-    img: EllieAnderson,
-    review: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`,
+    name: `EL Dear God Mudryk`,
+    domain: `Corporate`,
+    img: Mudryk,
+    review: `As a small business owner, I found Hilink Kinthill Law Firm's legal support invaluable for drafting contracts and handling negotiations. Highly recommend!`,
   },
   {
     id: nanoid(),
-    name: `Nia Adebayo`,
-    img: NiaAdebayo,
-    review: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`,
+    name: `Nanang Jackson`,
+    domain: `Real Estate Law`,
+    img: Nanang,
+    review: `Hilink Kinthill Law Firm made buying our first home stress-free, handling all legalities with precision. Couldn't be happier with their service.`,
   },
   {
     id: nanoid(),
-    name: `Rigo Louie`,
-    img: RigoLouie,
-    review: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`,
+    name: `Badminson`,
+    domain: `Capital Markets`,
+    img: Badminson,
+    review: `Hilink Kinthill Law Firm's expertise in capital markets was crucial for our startup. Their strategic advice helped us secure necessary funding.`,
   },
   {
     id: nanoid(),
-    name: `Mia Williams`,
-    img: MiaWilliams,
-    review: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`,
+    name: `Ben White`,
+    domain: `Commercial Contracts`,
+    img: White,
+    review: `Hilink Kinthill Law Firm exceeded our expectations in negotiating commercial contracts, benefiting our procurement process significantly. Highly recommend!`,
   },
 ];
 

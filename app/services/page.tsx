@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import HeroServices from "../_components/_HeroServices/page";
 import service from "@/assets/_services";
+import Testimonial from "../_components/_Testimonial/page";
 
 const Services: React.FC = () => {
   return (
@@ -25,6 +26,8 @@ const Services: React.FC = () => {
           </div>
         ))}
       </div>
+
+      <Testimonial />
     </main>
   );
 };

@@ -47,16 +47,17 @@ const Testimonial: React.FC = () => {
           <div
             key={data.id}
             className="bg-white w-[full] sm:w-1/2 p-4 text-black rounded-xl">
-            <div className="h-56 bg-[#144b51] flex justify-center items-center rounded-t-xl">
+            <div className="h-56 bg-[#144b51] flex justify-center items-center">
               <Image
                 src={data.img}
                 alt={`image-${data.name}`}
-                className="h-44 w-44 rounded-full"
+                className="h-44 w-44 rounded-full bg-[#fff]"
               />
             </div>
 
-            <div className="flex flex-col items-center bg-[#144b51] justify-center rounded-b-xl gap-4 p-4">
+            <div className="flex flex-col items-center bg-[#144b51] justify-center gap-4 p-4">
               <p className="text-xl font-semibold text-[#fff]">{data.name}</p>
+              <q className="text-center text-[#fff] text-sm">{data.domain}</q>
               <p className="text-center text-[#fff]">{data.review}</p>
               <div className="star my-2 flex gap-2">
                 {Array.from({ length: 5 }, (_, index) => (
