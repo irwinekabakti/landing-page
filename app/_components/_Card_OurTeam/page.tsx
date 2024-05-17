@@ -9,7 +9,7 @@ import { IoMdMail } from "react-icons/io";
 import { MdOutlineWork, MdOutlineWorkspacePremium } from "react-icons/md";
 import { GiAchievement } from "react-icons/gi";
 
-const CardOurTeam = () => {
+const CardOurTeam: React.FC = () => {
   const { dataUser } = useAppSelector((state) => state.dataStore);
   let skills: string[] = [
     "Banking and Finance",
@@ -47,7 +47,7 @@ const CardOurTeam = () => {
           <div
             key={data.login.uuid}
             className="bg-white w-[full] p-4 text-black rounded-xl">
-            <div className="h-56 bg-[#144b51] flex justify-center items-center rounded-t-xl">
+            <div className="h-56 bg-[#144b51] flex justify-center items-center">
               <Image
                 src={data.picture.large}
                 width={30}
@@ -57,7 +57,7 @@ const CardOurTeam = () => {
               />
             </div>
 
-            <div className="flex flex-col items-center bg-[#144b51] rounded-b-xl gap-4 p-4">
+            <div className="flex flex-col items-center bg-[#144b51] gap-4 p-4">
               <p className="text-xl font-semibold text-[#fff]">
                 {data.name.title} {data.name.first} {data.name.last}
               </p>

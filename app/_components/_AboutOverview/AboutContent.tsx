@@ -5,7 +5,7 @@ interface AboutOverviewProps {
   content: string[];
 }
 
-const AboutOverview: React.FC<AboutOverviewProps> = ({ title, content }) => {
+const AboutContent: React.FC<AboutOverviewProps> = ({ title, content }) => {
   return (
     <div className="col-span-12 mx-4 lg:mx-16 my-6">
       <div className="about-content">
@@ -24,4 +24,4 @@ const AboutOverview: React.FC<AboutOverviewProps> = ({ title, content }) => {
   );
 };
 
-export default AboutOverview;
+export default AboutContent;

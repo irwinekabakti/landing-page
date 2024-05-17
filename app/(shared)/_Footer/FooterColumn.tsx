@@ -5,7 +5,7 @@ interface FooterColumnProps {
   children: React.ReactNode;
 }
 
-const FooterColumn = ({ title, children }: FooterColumnProps) => {
+const FooterColumn: React.FC<FooterColumnProps> = ({ title, children }) => {
   return (
     <div className="flex flex-col gap-5">
       <h4 className="font-bold text-lg whitespace-nowrap">{title}</h4>

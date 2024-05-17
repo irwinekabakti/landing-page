@@ -1,0 +1,15 @@
+.btnAboutServices {
+  color: #000;
+  border: 1px solid #144b51;
+}
+
+.btnAboutServices:hover {
+  background-position: left bottom;
+  color: #fff;
+}
+
+.bgAboutService {
+  background-image: url("../../../assets/aboutContent.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}

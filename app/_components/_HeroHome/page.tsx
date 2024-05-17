@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import classes from "./style.module.css";
 
-const Hero = () => {
+const Hero: React.FC = () => {
   return (
     <div className={`${classes.heroHome} hero mb-8`}>
       <div className="heroDetail">

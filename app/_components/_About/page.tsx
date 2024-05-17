@@ -5,7 +5,7 @@ import GridComponent from "@/app/(shared)/_Grid/GridComponent";
 import AboutImg from "../../../assets/about.png";
 import classes from "./style.module.css";
 
-const About = () => {
+const About: React.FC = () => {
   return (
     <GridComponent className="mb-4 lg:mb-12" id="about">
       <div className="aboutDescription mx-4 my-auto lg:mx-16">

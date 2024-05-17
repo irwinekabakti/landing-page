@@ -11,7 +11,7 @@ import service from "@/assets/_services/index";
 import GridComponent from "@/app/(shared)/_Grid/GridComponent";
 import classes from "./style.module.css";
 
-const Services = () => {
+const Services: React.FC = () => {
   // const [isHovered, setIsHovered] = useState(false);
   // const handleMouseEnter = () => {
   //   setIsHovered(true);
