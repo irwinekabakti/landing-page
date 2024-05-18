@@ -121,9 +121,9 @@ const userDataSlice = createSlice({
       .addCase(
         fetchUserData.fulfilled,
         (state, action: PayloadAction<UserData>) => {
-          state.status = "succeeded";
-          state.dataUser = action.payload;
           if (!localStorage.getItem("userData")) {
+            state.status = "succeeded";
+            state.dataUser = action.payload;
             localStorage.setItem(
               "userData",
               JSON.stringify(state.dataUser.results)
