@@ -11,6 +11,7 @@ import { GiAchievement } from "react-icons/gi";
 
 const CardOurTeam: React.FC = () => {
   const { dataUser } = useAppSelector((state) => state.dataStore);
+
   let skills: string[] = [
     "Banking and Finance",
     "Capital Markets",
@@ -26,8 +27,6 @@ const CardOurTeam: React.FC = () => {
     "Government",
   ];
 
-  console.log(dataUser.results);
-
   let dataTeam = dataUser.results.map((data) => {
     let shuffledSkills = skills.sort(() => Math.random() - 0.5);
     const assignedSkills = shuffledSkills.slice(0, 2);
@@ -36,8 +35,6 @@ const CardOurTeam: React.FC = () => {
       skills: assignedSkills,
     };
   });
-
-  // console.log(dataTeam);
 
   return (
     <div className="mx-4 mt-0 lg:mx-16 py-6 mb-12">

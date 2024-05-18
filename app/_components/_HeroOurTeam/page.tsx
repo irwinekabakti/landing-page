@@ -1,13 +1,21 @@
 "use client";
 
 import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { fetchUserData } from "@/store/action/user-slice";
+import { useDispatch } from "react-redux";
+import {
+  fetchUserData,
+  loadUserDataFromStorage,
+} from "@/store/action/user-slice";
 import classes from "./style.module.css";
 import OurTeamOverview from "./HeroOverview";
+import { useAppDispatch } from "@/store";
 
 const HeroOurTeam: React.FC = () => {
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
+
+  /*
+  // no localStorage
+  // const dispatch = useDispatch();
 
   // const getData = (dispatch: any) => {
   //   dispatch(fetchUserData());
@@ -16,17 +24,20 @@ const HeroOurTeam: React.FC = () => {
   // useEffect(() => {
   //   getData(dispatch);
   // }, []);
+  */
 
   const getData = (dispatch: any) => {
     const storedData = localStorage.getItem("userData");
     if (!storedData) {
       dispatch(fetchUserData());
+    } else {
+      dispatch(loadUserDataFromStorage());
     }
   };
 
   useEffect(() => {
     getData(dispatch);
-  }, [dispatch]);
+  }, []);
 
   const contentOverview = [
     "At Hilink Kinthill Law Firm, we are dedicated to attracting and retaining the best legal talent in the industry. Our team is comprised of experienced attorneys who are highly skilled and knowledgeable in their areas of practice.",

@@ -1,10 +1,10 @@
 import { Provider } from "react-redux";
 import { store } from "./index";
 
-export default function ReduxProvider({
+const ReduxProvider: React.FC<{ children: React.ReactNode }> = ({
   children,
-}: {
-  children: React.ReactNode;
-}) {
+}) => {
   return <Provider store={store}>{children}</Provider>;
-}
+};
+
+export default ReduxProvider;

@@ -70,23 +70,11 @@ export interface RootState {
   error: string | null;
 }
 
-const loadInitialState = (): RootState => {
-  const storedData = localStorage.getItem("userData");
-  if (storedData) {
-    return {
-      dataUser: { results: JSON.parse(storedData) },
-      status: "idle",
-      error: null,
-    };
-  }
-  return {
-    dataUser: { results: [] },
-    status: "idle",
-    error: null,
-  };
+const initialState: RootState = {
+  dataUser: { results: [] },
+  status: "idle",
+  error: null,
 };
-
-const initialState: RootState = loadInitialState();
 
 export const fetchUserData = createAsyncThunk<
   UserData,
@@ -109,8 +97,15 @@ const userDataSlice = createSlice({
   name: "userData",
   initialState,
   reducers: {
-    getUserData(state) {
-      localStorage.setItem("userData", JSON.stringify(state.dataUser.results));
+    setUserData(state, action: PayloadAction<UserData>) {
+      state.dataUser = action.payload;
+      localStorage.setItem("userData", JSON.stringify(action.payload.results));
+    },
+    loadUserDataFromStorage(state) {
+      const storedData = localStorage.getItem("userData");
+      if (storedData) {
+        state.dataUser.results = JSON.parse(storedData);
+      }
     },
   },
   extraReducers: (builder) => {
@@ -121,14 +116,12 @@ const userDataSlice = createSlice({
       .addCase(
         fetchUserData.fulfilled,
         (state, action: PayloadAction<UserData>) => {
-          if (!localStorage.getItem("userData")) {
-            state.status = "succeeded";
-            state.dataUser = action.payload;
-            localStorage.setItem(
-              "userData",
-              JSON.stringify(state.dataUser.results)
-            );
-          }
+          state.status = "succeeded";
+          state.dataUser = action.payload;
+          localStorage.setItem(
+            "userData",
+            JSON.stringify(state.dataUser.results)
+          );
         }
       )
       .addCase(
@@ -141,11 +134,12 @@ const userDataSlice = createSlice({
   },
 });
 
-export const { getUserData } = userDataSlice.actions;
+export const { setUserData, loadUserDataFromStorage } = userDataSlice.actions;
 
 export default userDataSlice;
 
 /*
+// no localStorage
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
