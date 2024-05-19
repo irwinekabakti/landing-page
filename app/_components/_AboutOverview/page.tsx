@@ -2,6 +2,7 @@ import React from "react";
 import AboutContent from "./AboutContent";
 import CardComponent from "./CardComponent";
 import classes from "./styles.module.css";
+import { title } from "process";
 
 const AboutOverview = () => {
   const OverviewContent = [
@@ -15,9 +16,52 @@ const AboutOverview = () => {
     "The South East Asia region is experiencing a period of rapid economic growth and development. As international businesses look to tap into this lucrative market, the demand for high-quality legal services has never been greater.",
   ];
 
+  /*
+  const detailValues = [
+    {
+      title: "Key values that define our culture include:",
+    },
+    {
+      value: [
+        "Integrity: We uphold the highest ethical standards in all our dealings. Client-Centered",
+        "Service: Our clients' needs and interests are at the forefront of everything we do.",
+        "Excellence: We are committed to delivering the highest quality of legal services.",
+        "Innovation: We embrace new ideas and technologies to provide cutting-edge solutions.Community",
+        "Engagement: We believe in giving back to the community and are actively involved in various pro bono initiatives.",
+      ],
+    },
+    {
+      explanation:
+        "Working at Hilink Kinthill Law Group means being part of a dynamic and forward-thinking team where your contributions make a real difference. Our open-door policy ensures that every voice is heard, and our comprehensive professional development programs provide continuous learning opportunities. Join us and be part of a firm that not only values your skills but also your aspirations and well-being.",
+    },
+  ];
+  */
+  const cultureValues = [
+    "At Hilink Kinthill Law Group, our culture is built on a foundation of integrity, collaboration, and continuous improvement. We believe that the best legal solutions are achieved through a team-oriented approach that leverages diverse perspectives and expertise. Our firm fosters a supportive and inclusive environment where every team member is valued and encouraged to grow professionally and personally.",
+  ];
+
+  const titleValues = "Key values that define our culture include:";
+  const itemValues = [
+    "Integrity: We uphold the highest ethical standards in all our dealings. Client-Centered",
+    "Service: Our client's needs and interests are at the forefront of everything we do.",
+    "Excellence: We are committed to delivering the highest quality of legal services.",
+    "Innovation: We embrace new ideas and technologies to provide cutting-edge solutions.Community",
+    "Engagement: We believe in giving back to the community and are actively involved in various pro bono initiatives.",
+  ];
+  const expValues =
+    "Working at Hilink Kinthill Law Group means being part of a dynamic and forward-thinking team where your contributions make a real difference. Our open-door policy ensures that every voice is heard, and our comprehensive professional development programs provide continuous learning opportunities. Join us and be part of a firm that not only values your skills but also your aspirations and well-being.";
+
   return (
     <>
       <AboutContent title="OVERVIEW" content={OverviewContent} />
+      <AboutContent
+        title="CULTURE AND VALUE"
+        content={cultureValues}
+        titleValue={titleValues}
+        itemValues={itemValues}
+        expValues={expValues}
+      />
+
       <AboutContent
         title="REGIONAL CAPABILITIES"
         content={RegionalCapabilitiesContent}
