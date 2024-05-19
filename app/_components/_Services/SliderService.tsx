@@ -5,7 +5,7 @@ import Image from "next/image";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import service from "@/assets/_services/index";
+import serviceData from "@/assets/_services/index";
 
 const SliderService: React.FC = () => {
   const settings = {
@@ -39,7 +39,7 @@ const SliderService: React.FC = () => {
   };
   return (
     <Slider {...settings} aria-hidden="true">
-      {service.map((data) => (
+      {serviceData.map((data) => (
         <div className="w-[full] sm:w-1/2 p-4" aria-hidden="true" key={data.id}>
           <div className="bg-[#144b51] shadow-md ">
             <Image src={data.img} alt={data.name} />

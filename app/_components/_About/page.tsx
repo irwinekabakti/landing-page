@@ -32,7 +32,7 @@ const About: React.FC = () => {
       </div>
 
       <div className="aboutImage hidden lg:block mx-4 my-auto lg:mx-16">
-        <Image src={AboutImg} alt="about-image" />
+        <Image src={AboutImg} alt="about-image" rel="preload" />
       </div>
     </GridComponent>
   );

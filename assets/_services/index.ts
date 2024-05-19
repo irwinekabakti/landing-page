@@ -27,19 +27,6 @@ import Technology from "./technology.webp";
 import Restructuring from "./restructuring.webp";
 import Government from "./goverment.webp";
 
-// import Banking from "./banking.png";
-// import Capital from "./capital_market.png";
-// import Commercial from "./commercial.png";
-// import Compliance from "./compliance.png";
-// import Construction from "./construction.png";
-// import Corporate from "./corporate.png";
-// import Dispute from "./dispute.png";
-// import Employment from "./employment.png";
-// import RealEstate from "./real_estate.png";
-// import Technology from "./technology.png";
-// import Restructuring from "./restructuring.png";
-// import Government from "./goverment.png";
-
 const serviceData: ServiceDataProps[] = [
   {
     id: nanoid(),
@@ -253,7 +240,7 @@ const serviceData: ServiceDataProps[] = [
     id: nanoid(),
     name: "Technology & Data Protection",
     img: Technology,
-    route: "",
+    route: "Technology-and-Data-Protection",
     overview: [
       "Our practice covers a wide regional scope, and we have worked with clients from a variety of industries, including healthcare, finance, technology, and more. We are proud to have been recognized as an award-winning practice, and we strive to provide the highest level of service to all of our clients.",
     ],
