@@ -1,56 +1,10 @@
-"use client";
-
 import React from "react";
-// import { useState } from "react";
-import Image from "next/image";
-import Slider from "react-slick";
 import Link from "next/link";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import service from "@/assets/_services/index";
 import GridComponent from "@/app/(shared)/_Grid/GridComponent";
+import SliderService from "./SliderService";
 import classes from "./style.module.css";
 
 const Services: React.FC = () => {
-  // const [isHovered, setIsHovered] = useState(false);
-  // const handleMouseEnter = () => {
-  //   setIsHovered(true);
-  // };
-
-  // const handleMouseLeave = () => {
-  //   setIsHovered(false);
-  // };
-
-  const settings = {
-    infinite: true,
-    speed: 5000,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 5000,
-    cssEase: "ease",
-    responsive: [
-      {
-        breakpoint: 640,
-        settings: {
-          slidesToShow: 1,
-        },
-      },
-      {
-        breakpoint: 992,
-        settings: {
-          slidesToShow: 2,
-        },
-      },
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-        },
-      },
-    ],
-  };
-
   return (
     <>
       <GridComponent id="services" className="my-8 lg:my-20">
@@ -73,34 +27,7 @@ const Services: React.FC = () => {
       </GridComponent>
 
       <div className="sliderContainer mx-4 mt-0 lg:mx-16 py-6">
-        <Slider {...settings}>
-          {service.map((data) => (
-            <div className="w-[full] sm:w-1/2 p-4" key={data.id}>
-              <div className="bg-[#144b51] shadow-md ">
-                <Image src={data.img} alt={data.name} />
-                <div className="p-4 ">
-                  <Link
-                    href="/services"
-                    // onMouseEnter={handleMouseEnter}
-                    // onMouseLeave={handleMouseLeave}
-                    className="inline-block mt-4 px-4 py-2 text-white font-semibold rounded-md">
-                    {data.name}
-                  </Link>
-                  <hr className="bg-blue-600 ml-[10px] w-[200px]" />
-                  {/* <hr
-                    className={`bg-blue-600 ml-[10px] w-${
-                      isHovered ? "150" : "90"
-                    }px`}
-                  /> */}
-
-                  {/* <hr
-                  className={`bg-red-600 w-[${isHovered ? "150px" : "80px"}]`}
-                  /> */}
-                </div>
-              </div>
-            </div>
-          ))}
-        </Slider>
+        <SliderService />
 
         <div className="detailServices mt-4 flex justify-center sm:justify-start">
           <Link

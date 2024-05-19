@@ -2,18 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-/* .mainHome,
-.mainAbout,
-.mainServices {
-  overflow-x: hidden;
-} */
-
 @layer base {
   body {
     @apply font-[Raleway];
   }
 
-  li {
+  nav ul li {
     @apply px-4;
     @apply cursor-pointer;
   }
@@ -33,4 +27,20 @@
   background-position: right bottom;
   transition: background-position 0.5s ease-in-out;
   outline: none;
+}
+
+.custom-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 30%;
+  height: 2px;
+  margin: 0 10px;
+  background-color: white;
+  transition: width 0.5s ease-in-out;
+}
+
+.custom-underline:hover::after {
+  width: 80%;
 }

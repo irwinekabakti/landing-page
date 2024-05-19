@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import GridComponent from "@/app/(shared)/_Grid/GridComponent";
-import AboutImg from "../../../assets/about.png";
+import AboutImg from "../../../assets/about.webp";
 import classes from "./style.module.css";
 
 const About: React.FC = () => {
@@ -22,8 +22,11 @@ const About: React.FC = () => {
           results for our clients.
         </p>
         <div className="my-4">
-          <Link href="about" className={`${classes.btnAbout} btn px-12 py-3`}>
-            Learn more
+          <Link
+            aria-label="About Us"
+            href="/OurTeam"
+            className={`${classes.btnAbout} btn px-12 py-3`}>
+            Our Team
           </Link>
         </div>
       </div>

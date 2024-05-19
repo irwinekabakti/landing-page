@@ -7,25 +7,10 @@ import { useAppSelector } from "@/store";
 import { FaHome, FaPhoneAlt, FaMobileAlt } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
 import { MdOutlineWork, MdOutlineWorkspacePremium } from "react-icons/md";
-import { GiAchievement } from "react-icons/gi";
+import { skills } from "@/constant";
 
 const CardOurTeam: React.FC = () => {
   const { dataUser } = useAppSelector((state) => state.dataStore);
-
-  let skills: string[] = [
-    "Banking and Finance",
-    "Capital Markets",
-    "Commercial Contracts",
-    "Compliance and Investigations",
-    "Mega Projects and State Owned Enterprises",
-    "Corporate and M&A",
-    "Dispute Resolution and Litigation",
-    "Employment",
-    "Intellectual Property",
-    "Technology & Data Protection",
-    "Restructuring and Insolvency",
-    "Government",
-  ];
 
   let dataTeam = dataUser.results.map((data) => {
     let shuffledSkills = skills.sort(() => Math.random() - 0.5);
@@ -58,14 +43,14 @@ const CardOurTeam: React.FC = () => {
               <p className="text-xl font-semibold text-[#fff]">
                 {data.name.title} {data.name.first} {data.name.last}
               </p>
-              <div className="flex gap-4 cursor-pointer">
+              <div className="flex gap-2 cursor-pointer">
                 <FaHome className="text-[#fff]" />
                 <p className="text-sm font-semibold text-[#fff]">
                   {data.location.city}, {data.location.country}
                 </p>
               </div>
 
-              <div className="flex gap-4 cursor-pointer">
+              <div className="flex gap-2 cursor-pointer">
                 <FaPhoneAlt className="text-[#fff]" />
                 <Link
                   href={`tel:${data.phone}`}
@@ -73,7 +58,7 @@ const CardOurTeam: React.FC = () => {
                   {data.phone}
                 </Link>
               </div>
-              <div className="flex gap-4 cursor-pointer">
+              <div className="flex gap-2 cursor-pointer">
                 <FaMobileAlt className="text-[#fff] " />
                 <Link
                   href={`tel:${data.cell}`}
@@ -81,7 +66,7 @@ const CardOurTeam: React.FC = () => {
                   {data.cell}
                 </Link>
               </div>
-              <div className="flex gap-4 cursor-pointer">
+              <div className="flex gap-2 cursor-pointer">
                 <IoMdMail className="my-auto text-[#fff]" />
                 <Link
                   href={`mailto:${data.email}`}
@@ -91,8 +76,16 @@ const CardOurTeam: React.FC = () => {
               </div>
 
               <div className="skill my-2 text-sm font-semibold text-[#fff]">
-                <p className="mx-auto text-center">{data.skills[0]}</p>
-                <p className="mx-auto text-center">{data.skills[1]}</p>
+                <div className="flex gap-2">
+                  <MdOutlineWork className="my-auto" />
+
+                  <p className="mx-auto text-center">{data.skills[0]}</p>
+                </div>
+                <div className="flex gap-2">
+                  <MdOutlineWorkspacePremium className="my-auto" />
+
+                  <p className="mx-auto text-center">{data.skills[1]}</p>
+                </div>
               </div>
             </div>
           </div>
