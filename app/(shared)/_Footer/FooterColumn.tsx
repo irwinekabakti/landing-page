@@ -1,14 +1,14 @@
-import React from "react";
+import React, { ReactNode } from "react";
 
 interface FooterColumnProps {
   title: string;
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
 const FooterColumn: React.FC<FooterColumnProps> = ({ title, children }) => {
   return (
     <div className="flex flex-col gap-5">
-      <h4 className="font-bold text-lg whitespace-nowrap">{title}</h4>
+      <h1 className="font-bold text-lg whitespace-nowrap">{title}</h1>
       {children}
     </div>
   );

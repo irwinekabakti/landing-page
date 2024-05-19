@@ -3,7 +3,7 @@ import classes from "./styles.module.css";
 
 const HeroAbout: React.FC = () => {
   return (
-    <div className={`${classes.heroAbout} hero mb-8`}>
+    <div className={`${classes.heroAbout} hero mb-8`} rel="preload">
       <div className="mx-auto">
         <div className="heroDetail mx-4">
           <h1 className="titleDetail mx-auto md:ml-12 lg:ml-20 text-xl md:text-3xl text-[#fff] mb-6">

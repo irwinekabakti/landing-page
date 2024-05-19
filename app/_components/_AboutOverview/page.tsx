@@ -30,7 +30,7 @@ const AboutOverview = () => {
               title="Full Service Means Full Service"
               description="Our team has the local know-how and expertise to service our clients in emerging and established companies in matters ranging from banking and finance to litigation to restructuring."
               linkHref="/services"
-              buttonText="Learn More"
+              buttonText="See Full Service"
               buttonClasses={classes.btnAboutServices}
             />
 
@@ -38,7 +38,7 @@ const AboutOverview = () => {
               title="Local On-the-Ground Teams with International Outlook"
               description="Indonesia has become not only a hub for fast-growing industries and sectors but also a center for cross-border and international deals. Our team’s deep local and cross-border experience has translated to helping our clients find the best solutions that make the most practical commercial sense."
               linkHref="/OurTeam"
-              buttonText="Learn More"
+              buttonText="See Our Team"
               buttonClasses={classes.btnAboutServices}
             />
           </div>

@@ -24,12 +24,14 @@ const Client: React.FC = () => {
       <SliderComponent
         settings={settings}
         clients={clients}
+        aria-hidden="true"
         className="sm:mb-8 lg:mb-16"
       />
 
       <SliderComponent
         settings={settings2}
         clients={clients}
+        aria-hidden="true"
         className="mt-4"
       />
     </div>

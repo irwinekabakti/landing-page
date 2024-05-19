@@ -11,20 +11,34 @@ export interface ServiceDataProps {
     title: string;
     items: string[];
   };
+  explanation?: string;
 }
 
-import Banking from "./banking.png";
-import Capital from "./capital_market.png";
-import Commercial from "./commercial.png";
-import Compliance from "./compliance.png";
-import Construction from "./construction.png";
-import Corporate from "./corporate.png";
-import Dispute from "./dispute.png";
-import Employment from "./employment.png";
-import RealEstate from "./real_estate.png";
-import Technology from "./technology.png";
-import Restructuring from "./restructuring.png";
-import Government from "./goverment-focus.png";
+import Banking from "./banking.webp";
+import Capital from "./capital_market.webp";
+import Commercial from "./commercial.webp";
+import Compliance from "./compliance.webp";
+import Construction from "./construction.webp";
+import Corporate from "./corporate.webp";
+import Dispute from "./dispute.webp";
+import Employment from "./employment.webp";
+import RealEstate from "./real_estate.webp";
+import Technology from "./technology.webp";
+import Restructuring from "./restructuring.webp";
+import Government from "./goverment.webp";
+
+// import Banking from "./banking.png";
+// import Capital from "./capital_market.png";
+// import Commercial from "./commercial.png";
+// import Compliance from "./compliance.png";
+// import Construction from "./construction.png";
+// import Corporate from "./corporate.png";
+// import Dispute from "./dispute.png";
+// import Employment from "./employment.png";
+// import RealEstate from "./real_estate.png";
+// import Technology from "./technology.png";
+// import Restructuring from "./restructuring.png";
+// import Government from "./goverment.png";
 
 const serviceData: ServiceDataProps[] = [
   {
@@ -60,7 +74,7 @@ const serviceData: ServiceDataProps[] = [
       "Our experience ranges from handling IPOs to listing and bond issues, secondary fundraising, locally, regionally and internationally.",
     ],
     description:
-      "We are one of the leading law firms in Indonesia in covering capital markets. Our team of lawyers cover a full spectrum of areas from equity capital markets, debt capital markets, and funds markets. Our in-depth knowledge of the Indonesia market coupled with our innate ingenuity has made GHP Law Firm the go-to firm for advisory on capital markets.",
+      "We are one of the leading law firms in Indonesia in covering capital markets. Our team of lawyers cover a full spectrum of areas from equity capital markets, debt capital markets, and funds markets. Our in-depth knowledge of the Indonesia market coupled with our innate ingenuity has made Hilink Kinthill Law Firm the go-to firm for advisory on capital markets.",
     ground: {
       title: "We advise on:",
       items: [
@@ -122,11 +136,11 @@ const serviceData: ServiceDataProps[] = [
     img: Construction,
     route: "mega-projects-and-state-owned-enterprises",
     overview: [
-      "At GHP Law Firm, our Mega Projects practice area is dedicated to providing expert legal services to clients involved in complex strategic government projects including but not limited to State owned enterprises. Our attorneys have extensive experience in this area and are well-versed in the legal issues and challenges that can arise during the development and execution of mega projects.",
+      "At Hilink Kinthill Law Firm, our Mega Projects practice area is dedicated to providing expert legal services to clients involved in complex strategic government projects including but not limited to State owned enterprises. Our attorneys have extensive experience in this area and are well-versed in the legal issues and challenges that can arise during the development and execution of mega projects.",
       "We have a track record of success in representing clients in a variety of sectors, including infrastructure, energy, and natural resources. Our attorneys have a deep understanding of the regulatory and legal frameworks that govern mega projects and are skilled at navigating the complex stakeholder landscape that often surrounds these initiatives.",
     ],
     description:
-      "GHP Law Firm's Mega Projects team provides expert legal services for complex government projects. Our attorneys have a track record of success in various sectors, including energy and infrastructure, and offer integrated services covering corporate reorganization, M&A, capital markets, and project development. Our goal is to successfully navigate the legal challenges of mega projects for our clients.",
+      "Hilink Kinthill Law Firm's Mega Projects team provides expert legal services for complex government projects. Our attorneys have a track record of success in various sectors, including energy and infrastructure, and offer integrated services covering corporate reorganization, M&A, capital markets, and project development. Our goal is to successfully navigate the legal challenges of mega projects for our clients.",
     ground: {
       title:
         "We provide integrated services across legal disciplines and project management for complex projects and transactions. Our services include:",
@@ -137,6 +151,8 @@ const serviceData: ServiceDataProps[] = [
         "Development of Energy, Infrastructure, Telecommunications, and Industrial Projects.",
       ],
     },
+    explanation:
+      "Overall, our Mega Projects practice area is equipped to handle all legal aspects of complex strategic government projects, from inception to completion. Our attorneys are dedicated to providing our clients with the highest level of legal representation and to achieving successful outcomes on their behalf.",
   },
   {
     id: nanoid(),
@@ -222,12 +238,12 @@ const serviceData: ServiceDataProps[] = [
     img: RealEstate,
     route: "intellectual-property",
     overview: [
-      "GHP Law Firm is dedicated to helping businesses and individuals protect their intellectual property rights. Our team of experienced attorneys is skilled in handling a wide range of intellectual property matters, including patents, trademarks, copyrights, and trade secrets.",
+      "Hilink Kinthill Law Firm is dedicated to helping businesses and individuals protect their intellectual property rights. Our team of experienced attorneys is skilled in handling a wide range of intellectual property matters, including patents, trademarks, copyrights, and trade secrets.",
       "We are able to service clients across the region, providing knowledgeable and personalized representation to meet their unique needs. Our attorneys have a deep understanding of the laws surrounding intellectual property and are able to effectively navigate the complex legal landscape.",
-      "Whether you are looking to secure your intellectual property rights, enforce your rights against an infringer, or resolve a dispute, GHP Law Firm has the expertise to help. Our attorneys have a track record of success in representing clients in intellectual property matters, and we are committed to achieving the best possible outcome for our clients.",
+      "Whether you are looking to secure your intellectual property rights, enforce your rights against an infringer, or resolve a dispute, Hilink Kinthill Law Firm has the expertise to help. Our attorneys have a track record of success in representing clients in intellectual property matters, and we are committed to achieving the best possible outcome for our clients.",
     ],
     description:
-      "GHP Law Firm is dedicated to helping businesses and individuals protect their intellectual property rights. Our team of experienced attorneys is skilled in handling a wide range of intellectual property matters, including patents, trademarks, copyrights, and trade secrets.",
+      "Hilink Kinthill Law Firm is dedicated to helping businesses and individuals protect their intellectual property rights. Our team of experienced attorneys is skilled in handling a wide range of intellectual property matters, including patents, trademarks, copyrights, and trade secrets.",
     ground: {
       title: "",
       items: [],
@@ -242,7 +258,7 @@ const serviceData: ServiceDataProps[] = [
       "Our practice covers a wide regional scope, and we have worked with clients from a variety of industries, including healthcare, finance, technology, and more. We are proud to have been recognized as an award-winning practice, and we strive to provide the highest level of service to all of our clients.",
     ],
     description:
-      "At GHP Law Firm, our Data Protection practice is highly regarded as a leader in the field. Our team has a deep understanding of the complex laws and regulations surrounding data protection, and we are dedicated to helping our clients navigate this rapidly evolving area of law.",
+      "At Hilink Kinthill Law Firm, our Data Protection practice is highly regarded as a leader in the field. Our team has a deep understanding of the complex laws and regulations surrounding data protection, and we are dedicated to helping our clients navigate this rapidly evolving area of law.",
     ground: {
       title:
         "Some of the typical data protection work that law firms like ours handle includes:",
@@ -255,6 +271,8 @@ const serviceData: ServiceDataProps[] = [
         "Counseling clients on best practices for data protection, including data retention and destruction policies, data security measures, and employee training",
       ],
     },
+    explanation:
+      "At Hilink Kinthill Law Firm, we are committed to helping our clients effectively manage their data protection obligations and minimize risk. If you have any questions or need assistance with a data protection issue, please don't hesitate to reach out to our experienced team.",
   },
   {
     id: nanoid(),
@@ -285,11 +303,11 @@ const serviceData: ServiceDataProps[] = [
     img: Government,
     route: "government",
     overview: [
-      "The Government Focus Group practice area at GHP Law Firm covers a broad range of legal services related to central and regional government agencies, including administrative law, regulatory compliance, government contracts, lobbying, and public policy advocacy. Our team of experienced attorneys is well-versed in navigating the complex legal landscape of central and regional government regulations and policies, and we are dedicated to helping our clients achieve their goals while maintaining compliance with applicable laws and regulations.",
-      "At GHP Law Firm, we understand that dealing with issues related to central and regional government agencies can be stressful and time-consuming for businesses and individuals. That's why we strive to provide personalized legal services that meet the unique needs of our clients. Whether you need assistance with government contracts, regulatory compliance, or public policy advocacy, our team is here to help.",
+      "The Government Focus Group practice area at Hilink Kinthill Law Firm covers a broad range of legal services related to central and regional government agencies, including administrative law, regulatory compliance, government contracts, lobbying, and public policy advocacy. Our team of experienced attorneys is well-versed in navigating the complex legal landscape of central and regional government regulations and policies, and we are dedicated to helping our clients achieve their goals while maintaining compliance with applicable laws and regulations.",
+      "At Hilink Kinthill Law Firm, we understand that dealing with issues related to central and regional government agencies can be stressful and time-consuming for businesses and individuals. That's why we strive to provide personalized legal services that meet the unique needs of our clients. Whether you need assistance with government contracts, regulatory compliance, or public policy advocacy, our team is here to help.",
     ],
     description:
-      "The Government Focus Group practice area at GHP Law Firm covers a broad range of legal services related to central and regional government agencies, including administrative law, regulatory compliance, government contracts, lobbying, and public policy advocacy",
+      "The Government Focus Group practice area at Hilink Kinthill Law Firm covers a broad range of legal services related to central and regional government agencies, including administrative law, regulatory compliance, government contracts, lobbying, and public policy advocacy",
     ground: {
       title: "Our services include:",
       items: [
@@ -299,6 +317,8 @@ const serviceData: ServiceDataProps[] = [
         "Public Policy Advocacy: Our team provides strategic counsel to clients on policy issues, helping them to understand the implications of proposed legislation and regulations.",
       ],
     },
+    explanation:
+      "At GHP Law Firm, we pride ourselves on our commitment to our client's success. Our experienced attorneys work diligently to provide customized legal solutions that meet the unique needs of each client. Contact us today to learn more about how we can assist you with your central and regional government-related legal needs.",
   },
 ];
 

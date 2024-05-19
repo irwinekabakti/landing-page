@@ -1,10 +1,10 @@
 import { StaticImageData } from "next/image";
 import { nanoid } from "nanoid";
-import Kai from "./Kai.png";
-import Mudryk from "./Mudryk.png";
-import Nanang from "./Nanang.png";
-import Badminson from "./Son.png";
-import White from "./White.png";
+import Kai from "./Kai.webp";
+import Mudryk from "./Mudryk.webp";
+import Nanang from "./Nanang.webp";
+import Badminson from "./Son.webp";
+import White from "./White.webp";
 
 interface TestimonialDataProps {
   id: string;

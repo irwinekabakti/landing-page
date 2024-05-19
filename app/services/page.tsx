@@ -4,6 +4,7 @@ import Link from "next/link";
 import HeroServices from "../_components/_HeroServices/page";
 import serviceData from "@/assets/_services";
 import Testimonial from "../_components/_Testimonial/page";
+import Achievement from "../_components/_Achievement/page";
 
 const Services: React.FC = () => {
   return (
@@ -13,20 +14,20 @@ const Services: React.FC = () => {
         {serviceData.map((data) => (
           <div className="py-2 md:p-4" key={data.id}>
             <div className="bg-[#144b51] shadow-md">
-              <Image src={data.img} alt={data.name} />
+              <Image src={data.img} alt={data.name} rel="preload" />
               <div className="p-4">
                 <Link
                   href={`/services/${data.route}`}
-                  passHref
-                  className="inline-block mt-4 px-2 text-white rounded-md hover:underline underline-offset-8">
+                  className="inline-block relative mt-4 px-2 py-2 text-white rounded-md custom-underline">
                   {data.name}
                 </Link>
-                {/* <hr className="bg-blue-600 ml-[10px] w-[200px]" /> */}
               </div>
             </div>
           </div>
         ))}
       </div>
+
+      <Achievement />
 
       <Testimonial />
     </main>
