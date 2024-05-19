@@ -1,5 +1,4 @@
-// "use client";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import serviceData from "@/assets/_services";
 
 const ServiceDetailPage = ({ params }: { params: { services: string } }) => {
@@ -7,18 +6,11 @@ const ServiceDetailPage = ({ params }: { params: { services: string } }) => {
     (service) => service.route === params.services
   );
 
-  // const [bgImageClass, setBgImageClass] = useState("");
-
-  // const getBgImage = () => {
-  //   setBgImageClass(`bg-${selectedService?.img.src}`);
-  // };
-
-  // useEffect(() => {
-  //   getBgImage();
-  // }, [params.services]);
-
   const backgroundImageStyle = selectedService
-    ? { backgroundImage: `url(${selectedService.img.src})` }
+    ? {
+        backgroundImage: `linear-gradient(rgba(20, 75, 81, 0.5), rgba(20, 75, 81, 0.5)), url(${selectedService.img.src})`,
+        backgroundColor: "#144B51",
+      }
     : {};
 
   return (

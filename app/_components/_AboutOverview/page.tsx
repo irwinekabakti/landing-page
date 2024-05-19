@@ -2,7 +2,6 @@ import React from "react";
 import AboutContent from "./AboutContent";
 import CardComponent from "./CardComponent";
 import classes from "./styles.module.css";
-import { title } from "process";
 
 const AboutOverview = () => {
   const OverviewContent = [

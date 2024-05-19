@@ -24,13 +24,13 @@ const OverviewHome = () => {
         </div>
 
         <div className="overviewImage hidden lg:block mx-4 my-auto lg:mx-16">
-          <Image src={OverviewImage} alt="overview-image" />
+          <Image src={OverviewImage} alt="overview-image" rel="preload" />
         </div>
       </GridComponent>
 
       <GridComponent className="mb-4 lg:mb-12">
         <div className="historyImage hidden lg:block mx-4 my-auto lg:mx-16">
-          <Image src={HistoryImage} alt="history-image" />
+          <Image src={HistoryImage} alt="history-image" rel="preload" />
         </div>
 
         <div className="historyHome mx-4 my-auto lg:mx-16">
