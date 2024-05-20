@@ -1,13 +1,7 @@
 import axios from "axios";
 import { createSlice, createAsyncThunk, PayloadAction } from "@reduxjs/toolkit";
 
-const RAW_BASE_API = process.env.NEXT_PUBLIC_API_URL;
-
-if (!RAW_BASE_API) {
-  throw new Error("NEXT_PUBLIC_API_URL is not defined");
-}
-
-const BASE_API: string = RAW_BASE_API;
+const BASE_API: string = `https://randomuser.me/api/`;
 
 export interface User {
   gender: string;
