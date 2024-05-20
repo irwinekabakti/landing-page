@@ -1,8 +1,8 @@
 "use client";
 
 import React from "react";
-import HeroOurTeam from "../_components/_HeroOurTeam/page";
 import ReduxProvider from "@/store/redux-provider";
+import HeroOurTeam from "../_components/_HeroOurTeam/page";
 import CardOurTeam from "../_components/_Card_OurTeam/page";
 
 const OurTeam: React.FC = () => {

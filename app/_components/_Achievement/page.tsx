@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "next/image";
-// import ZoomImage from "@/app/(shared)/_ZoomImage/page";
 import awards from "@/assets/_achievements";
 
 const Achievement: React.FC = () => {
@@ -13,7 +12,6 @@ const Achievement: React.FC = () => {
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
           {awards.map((award) => (
             <div key={award.id} className="flex justify-around my-4">
-              {/* <ZoomImage canSwipeToUnzoom={true}> */}
               <Image
                 src={award.img}
                 height={100}
@@ -22,7 +20,6 @@ const Achievement: React.FC = () => {
                 rel="preload"
                 className="cursor-pointer"
               />
-              {/* </ZoomImage> */}
             </div>
           ))}
         </div>
