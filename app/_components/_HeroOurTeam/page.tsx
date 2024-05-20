@@ -12,19 +12,6 @@ import { useAppDispatch } from "@/store";
 const HeroOurTeam: React.FC = () => {
   const dispatch = useAppDispatch();
 
-  /*
-  // no localStorage
-  // const dispatch = useDispatch();
-
-  // const getData = (dispatch: any) => {
-  //   dispatch(fetchUserData());
-  // };
-
-  // useEffect(() => {
-  //   getData(dispatch);
-  // }, []);
-  */
-
   const getData = (dispatch: any) => {
     const storedData = localStorage.getItem("userData");
     if (!storedData) {

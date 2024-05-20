@@ -4,7 +4,7 @@ import GridComponent from "@/app/(shared)/_Grid/GridComponent";
 import HistoryImage from "@/assets/history.webp";
 import OverviewImage from "@/assets/slide1-conv.webp";
 
-const OverviewHome = () => {
+const OverviewHome: React.FC = () => {
   return (
     <>
       <GridComponent className="mb-4 lg:mb-12">

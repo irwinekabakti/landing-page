@@ -7,7 +7,7 @@ import Image from "next/image";
 import testimonialData from "@/assets/_testimonial/index";
 import { FaStar } from "react-icons/fa6";
 
-const SliderTestimonial = () => {
+const SliderTestimonial: React.FC = () => {
   const settings = {
     infinite: true,
     speed: 5000,
@@ -48,7 +48,11 @@ const SliderTestimonial = () => {
             <Image
               src={data.img}
               alt={`image-${data.name}`}
-              className="h-44 w-44 rounded-full bg-[#fff]"
+              height={176}
+              width={176}
+              className="rounded-full bg-[#fff]"
+              quality={100}
+              rel="preload"
             />
           </div>
 
