@@ -48,6 +48,8 @@ const Navbar: React.FC = () => {
       <div className="lg:mx-16 sm:mx-12">
         <Image
           src={LogoNavbar}
+          width={74}
+          height={29}
           alt="logoNavbar"
           className="cursor-pointer w-[50px]"
           quality={100}
@@ -59,7 +61,7 @@ const Navbar: React.FC = () => {
       <ul className="md:flex hidden lg:mx-16 sm:mx-12">
         <li
           className={`${
-            isScroll ? "text-[#000]" : "text-[#fff]"
+            isScroll ? "text-[#120d0d]" : "text-[#fff]"
           } hover:text-[#DA1D25]`}>
           <Link href="/">Home</Link>
         </li>
