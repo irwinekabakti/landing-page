@@ -50,11 +50,12 @@ const Navbar: React.FC = () => {
           src={LogoNavbar}
           alt="logoNavbar"
           className="cursor-pointer w-[50px]"
+          quality={100}
+          rel="preload"
           onClick={backHome}
         />
       </div>
 
-      {/* Menus */}
       <ul className="md:flex hidden lg:mx-16 sm:mx-12">
         <li
           className={`${
@@ -80,15 +81,8 @@ const Navbar: React.FC = () => {
           } hover:text-[#DA1D25]`}>
           <Link href="/OurTeam">Our Team</Link>
         </li>
-        {/* <li
-          className={`${
-            isScroll ? "text-[#000]" : "text-[#fff]"
-          } hover:text-[#DA1D25]`}>
-          <Link href="/contact">Contact</Link>
-        </li> */}
       </ul>
 
-      {/* Hamburger */}
       <div onClick={handleNavbar} className="md:hidden z-10">
         {!nav ? (
           <FaBars
@@ -99,7 +93,6 @@ const Navbar: React.FC = () => {
         )}
       </div>
 
-      {/* Mobile Menus */}
       <ul
         className={
           !nav
@@ -126,11 +119,6 @@ const Navbar: React.FC = () => {
             Our Team
           </Link>
         </li>
-        {/* <li className="py-3 text-1xl uppercase font-semibold text-[#fff] hover:text-[#DA1D25]">
-          <Link onClick={closeNavbar} href="/contact">
-            Contact
-          </Link>
-        </li> */}
       </ul>
     </nav>
   );

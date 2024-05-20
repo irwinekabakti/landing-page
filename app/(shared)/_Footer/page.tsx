@@ -19,6 +19,8 @@ const Footer: React.FC = () => {
               alt="logo"
               width={74}
               height={29}
+              quality={100}
+              rel="preload"
               className="ms-4 lg:ms-12"
             />
           </Link>

@@ -1,7 +1,13 @@
 import React from "react";
 import serviceData from "@/assets/_services";
 
-const ServiceDetailPage = ({ params }: { params: { services: string } }) => {
+interface ServiceDetailPageProps {
+  params: {
+    services: string;
+  };
+}
+
+const ServiceDetailPage: React.FC<ServiceDetailPageProps> = ({ params }) => {
   const selectedService = serviceData.find(
     (service) => service.route === params.services
   );
