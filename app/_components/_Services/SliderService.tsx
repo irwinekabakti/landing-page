@@ -42,7 +42,7 @@ const SliderService: React.FC = () => {
       {serviceData.map((data) => (
         <div className="w-[full] sm:w-1/2 p-4" aria-hidden="true" key={data.id}>
           <div className="bg-[#144b51] shadow-md ">
-            <Image src={data.img} alt={data.name} />
+            <Image src={data.img} alt={data.name} quality={100} rel="preload" />
             <div className="p-4 " aria-hidden="true">
               <Link
                 href={`/services/${data.route}`}

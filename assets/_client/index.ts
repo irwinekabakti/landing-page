@@ -10,13 +10,11 @@ import Ey from "./ey.png";
 import Gojek from "./gojek.png";
 import Grab from "./grab.png";
 import Halodoc from "./halodoc.png";
-// import Jago from "./jago.png";
 import Jenius from "./jenius.png";
 import OCBC from "./ocbc.png";
 import RuangGuru from "./ruangguru.png";
 import Shopee from "./shopee.png";
 import Stockbit from "./stockbit-bibit.png";
-// import Taco from "./taco.png";
 import TBS from "./tbs.png";
 import TikTok from "./tiktok.png";
 import Tokopedia from "./tokopedia.png";
@@ -43,13 +41,11 @@ const clients: ClientDataProps[] = [
   { id: nanoid(), name: "Gojek", img: Gojek },
   { id: nanoid(), name: "Grab", img: Grab },
   { id: nanoid(), name: "Halodoc", img: Halodoc },
-  // { id: nanoid(), name: "Jago", img: Jago },
   { id: nanoid(), name: "Jenius", img: Jenius },
   { id: nanoid(), name: "OCBC", img: OCBC },
   { id: nanoid(), name: "RuangGuru", img: RuangGuru },
   { id: nanoid(), name: "Shopee", img: Shopee },
   { id: nanoid(), name: "Stockbit", img: Stockbit },
-  // { id: nanoid(), name: "Taco", img: Taco },
   { id: nanoid(), name: "TBS", img: TBS },
   { id: nanoid(), name: "TikTok", img: TikTok },
   { id: nanoid(), name: "Tokopedia", img: Tokopedia },

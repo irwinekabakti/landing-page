@@ -14,7 +14,12 @@ const Services: React.FC = () => {
         {serviceData.map((data) => (
           <div className="py-2 md:p-4" key={data.id}>
             <div className="bg-[#144b51] shadow-md">
-              <Image src={data.img} alt={data.name} rel="preload" />
+              <Image
+                src={data.img}
+                alt={data.name}
+                rel="preload"
+                quality={100}
+              />
               <div className="p-4">
                 <Link
                   href={`/services/${data.route}`}

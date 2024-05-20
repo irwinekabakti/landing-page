@@ -1,30 +1,8 @@
-"use client";
-
-import React, { useEffect } from "react";
-import {
-  fetchUserData,
-  loadUserDataFromStorage,
-} from "@/store/action/user-slice";
+import React from "react";
 import classes from "./style.module.css";
 import OurTeamOverview from "./HeroOverview";
-import { useAppDispatch } from "@/store";
 
 const HeroOurTeam: React.FC = () => {
-  const dispatch = useAppDispatch();
-
-  const getData = (dispatch: any) => {
-    const storedData = localStorage.getItem("userData");
-    if (!storedData) {
-      dispatch(fetchUserData());
-    } else {
-      dispatch(loadUserDataFromStorage());
-    }
-  };
-
-  useEffect(() => {
-    getData(dispatch);
-  }, []);
-
   const contentOverview = [
     "At Hilink Kinthill Law Firm, we are dedicated to attracting and retaining the best legal talent in the industry. Our team is comprised of experienced attorneys who are highly skilled and knowledgeable in their areas of practice.",
     "We take pride in the diversity of our team and the range of perspectives and experiences that they bring to the table. This allows us to approach legal challenges from multiple angles and provide our clients with the most comprehensive and effective representation possible.",
@@ -49,8 +27,7 @@ const HeroOurTeam: React.FC = () => {
       </div>
 
       <OurTeamOverview
-        title="Hilink kinthill Law Firm Teams Overview
-"
+        title="Hilink kinthill Law Firm Teams Overview"
         content={contentOverview}
       />
     </>

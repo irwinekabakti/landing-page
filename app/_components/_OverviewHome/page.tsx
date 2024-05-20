@@ -24,13 +24,23 @@ const OverviewHome: React.FC = () => {
         </div>
 
         <div className="overviewImage hidden lg:block mx-4 my-auto lg:mx-16">
-          <Image src={OverviewImage} alt="overview-image" rel="preload" />
+          <Image
+            src={OverviewImage}
+            alt="overview-image"
+            rel="preload"
+            quality={100}
+          />
         </div>
       </GridComponent>
 
       <GridComponent className="mb-4 lg:mb-12">
         <div className="historyImage hidden lg:block mx-4 my-auto lg:mx-16">
-          <Image src={HistoryImage} alt="history-image" rel="preload" />
+          <Image
+            src={HistoryImage}
+            alt="history-image"
+            rel="preload"
+            quality={100}
+          />
         </div>
 
         <div className="historyHome mx-4 my-auto lg:mx-16">

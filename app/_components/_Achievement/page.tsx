@@ -19,6 +19,7 @@ const Achievement: React.FC = () => {
                 alt={award.name}
                 rel="preload"
                 className="cursor-pointer"
+                quality={100}
               />
             </div>
           ))}

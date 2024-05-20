@@ -1,9 +1,9 @@
 "use client";
 import React from "react";
+import Image, { StaticImageData } from "next/image";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { StaticImageData } from "next/image";
 
 interface clientData {
   id: string;
@@ -26,7 +26,14 @@ const SliderComponent: React.FC<SliderProps> = ({
     <Slider {...settings} className={`slider ${className}`}>
       {clients.map((data) => (
         <div key={data.id}>
-          <img src={data.img.src} alt={data.name} />
+          <Image
+            src={data.img.src}
+            width={120}
+            height={120}
+            alt={data.name}
+            rel="preload"
+            quality={100}
+          />
         </div>
       ))}
     </Slider>
